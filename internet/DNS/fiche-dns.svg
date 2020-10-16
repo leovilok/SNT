@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="fiche-dns.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg4530"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm">
+  <defs
+     id="defs4524">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker5743"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+         id="path5741" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker5632"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path5630"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker5530"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path5528"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="Arrow2Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+         id="path982" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+         id="path976" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path955" />
+    </marker>
+    <rect
+       id="rect5223"
+       height="26.289784"
+       width="191.61117"
+       y="5.2595404"
+       x="10.02475" />
+    <rect
+       x="10.02475"
+       y="5.2595404"
+       width="191.61117"
+       height="34.176282"
+       id="rect5278" />
+    <rect
+       id="rect5292"
+       height="37.488492"
+       width="180.52343"
+       y="5.2595404"
+       x="10.02475" />
+    <rect
+       id="rect5423"
+       height="34.176282"
+       width="191.61117"
+       y="5.2595404"
+       x="10.02475" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-1"
+     inkscape:window-x="-1"
+     inkscape:window-height="1078"
+     inkscape:window-width="1918"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="762.6908"
+     inkscape:cx="416.11286"
+     inkscape:zoom="1.7068538"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata4527">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Calque 1">
+    <text
+       id="text4538"
+       y="44.442776"
+       x="30.257597"
+       style="font-size:8.46666667px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583;"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.264583;font-size:8.46666667px;"
+         y="44.442776"
+         x="30.257597"
+         id="tspan4536"
+         sodipodi:role="line" /></text>
+    <text
+       id="text4542"
+       y="34.548565"
+       x="19.965918"
+       style="font-size:5.64444444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583;"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.264583;font-size:5.64444444px;"
+         y="34.548565"
+         x="19.965918"
+         id="tspan4540"
+         sodipodi:role="line" /></text>
+    <g
+       style="stroke-width:1.23514"
+       transform="matrix(0.80962351,0,0,0.80962351,19.989532,38.208272)"
+       id="g5348">
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         x="21.990351"
+         y="94.063828"
+         id="text4546"><tspan
+           sodipodi:role="line"
+           id="tspan4544"
+           x="21.990351"
+           y="94.063828"
+           style="font-size:5.64444px;stroke-width:0.326798">https://<tspan
+   style="font-weight:bold;stroke-width:0.326798"
+   id="tspan4570">fr.wikipedia.org</tspan>/wiki/Domain_Name_System</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         x="99.076836"
+         y="82.644646"
+         id="text4574"><tspan
+           sodipodi:role="line"
+           id="tspan4572"
+           x="99.076836"
+           y="82.644646"
+           style="font-size:5.64444px;stroke-width:0.326798">URL</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         x="77.293648"
+         y="108.82491"
+         id="text4594"><tspan
+           sodipodi:role="line"
+           id="tspan4592"
+           x="77.293648"
+           y="108.82491"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;stroke-width:0.326798">Nom de domaine</tspan></text>
+      <path
+         id="path4598"
+         style="fill:none;stroke:#000000;stroke-width:0.617571;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 185.28547,89.416994 c 0,-5.980914 -80.39398,-0.351915 -81.48948,-5.361218 -1.0955,5.009303 -81.489476,-0.619696 -81.489476,5.361218"
+         sodipodi:nodetypes="ccc" />
+      <path
+         sodipodi:nodetypes="ccc"
+         d="m 103.22714,96.234374 c 0,8.676656 -26.494598,0.510531 -26.855629,7.777646 -0.361033,-7.267115 -26.855633,0.89901 -26.855633,-7.777646"
+         style="fill:none;stroke:#000000;stroke-width:0.864599;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path5162" />
+    </g>
+    <g
+       style="stroke-width:1.23514"
+       transform="matrix(0.80962351,0,0,0.80962351,21.288984,-30.339854)"
+       id="g5256">
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         x="21.648712"
+         y="75.557861"
+         id="text4534"><tspan
+           sodipodi:role="line"
+           id="tspan4532"
+           x="21.648712"
+           y="75.557861"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.326798"><tspan
+   style="font-weight:bold;stroke-width:0.326798"
+   id="tspan5203">DNS</tspan> = <tspan
+   style="font-weight:bold;stroke-width:0.326798"
+   id="tspan5205">D</tspan>omain <tspan
+   style="font-weight:bold;stroke-width:0.326798"
+   id="tspan5207">N</tspan>ame <tspan
+   style="font-weight:bold;stroke-width:0.326798"
+   id="tspan5209">S</tspan>ystem =<tspan
+   style="font-weight:bold;stroke-width:0.326798"
+   id="tspan5211"> S</tspan>ystème de <tspan
+   style="font-weight:bold;stroke-width:0.326798"
+   id="tspan5213">n</tspan>oms de <tspan
+   style="font-weight:bold;stroke-width:0.326798"
+   id="tspan5215">d</tspan>omaines</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.93889px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         x="13.433204"
+         y="83.312851"
+         id="text5191"><tspan
+           sodipodi:role="line"
+           x="13.433204"
+           y="83.312851"
+           style="font-size:4.93889px;stroke-width:0.326798"
+           id="tspan5197"><tspan
+   id="tspan5201"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.326798">C'est le protocole qui permet de passer d'un nom de domaine </tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.326798"
+   id="tspan5199">à une adresse IP.</tspan> </tspan></text>
+    </g>
+    <text
+       transform="matrix(0.80962351,0,0,0.80962351,24.109152,39.25514)"
+       style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect5223);stroke-width:1.23514;"
+       id="text5221"
+       xml:space="preserve"><tspan
+         x="10.025391"
+         y="10.395502"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">Une </tspan><tspan
+           style="font-weight:bold;stroke-width:1.23514">adresse IP</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514"> est le numéro d'identification d'un ordinateur sur </tspan></tspan><tspan
+         x="10.025391"
+         y="17.647903"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">Internet, c'est l'adresse de départ et d'arrivée des </tspan><tspan
+           style="font-weight:bold;stroke-width:1.23514">paquets IP</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">.</tspan></tspan></text>
+    <text
+       id="text5241"
+       y="61.822811"
+       x="40.78064"
+       style="font-size:4.56987px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan5260"
+         style="stroke-width:0.264583"
+         y="61.822811"
+         x="40.78064"
+         sodipodi:role="line"><tspan
+   id="tspan5264"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.264583">Exemple IPv4 :</tspan> 91.198.174.192</tspan><tspan
+         id="tspan5258"
+         style="stroke-width:0.264583"
+         y="67.694527"
+         x="40.78064"
+         sodipodi:role="line"><tspan
+   id="tspan5266"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.264583">Exemple IPv6 :</tspan> 2620:0:862:ed1a::1</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text5276"
+       style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect5278);stroke-width:1.23514;"
+       transform="matrix(0.80962351,0,0,0.80962351,24.291947,73.529204)"><tspan
+         x="10.025391"
+         y="10.395502"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">Un </tspan><tspan
+           style="font-weight:bold;stroke-width:1.23514">nom de domaine</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514"> c'est le </tspan><tspan
+           style="font-weight:bold;stroke-width:1.23514">nom symbolique</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514"> d'un serveur, grâce </tspan></tspan><tspan
+         x="10.025391"
+         y="17.647903"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">auquel on peut retrouver son adresse IP.
+</tspan></tspan><tspan
+         x="10.025391"
+         y="24.900304"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">On peut le voir à l'intérieur d'une URL.
+</tspan></tspan><tspan
+         x="10.025391"
+         y="32.152706"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">       Exemple :</tspan></tspan></text>
+    <text
+       transform="matrix(0.80962351,0,0,0.80962351,24.291947,210.11627)"
+       style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect5292);stroke-width:1.23514;"
+       id="text5290"
+       xml:space="preserve"><tspan
+         x="10.025391"
+         y="10.395502"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">Un nom de domaine est composé de plusieurs éléments :
+</tspan></tspan><tspan
+         x="10.025391"
+         y="17.647903"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">- un </tspan><tspan
+           style="font-weight:bold;stroke-width:1.23514">nom de domaine de premier niveau</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">
+</tspan></tspan><tspan
+         x="10.025391"
+         y="24.900304"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">- un </tspan><tspan
+           style="font-weight:bold;stroke-width:1.23514">nom de domaine de deuxième niveau</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">
+</tspan></tspan><tspan
+         x="10.025391"
+         y="32.152706"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">- d'éventuels </tspan><tspan
+           style="font-weight:bold;stroke-width:1.23514">sous-domaines</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">
+</tspan></tspan><tspan
+         x="10.025391"
+         y="39.405107"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">      Exemple :</tspan></tspan></text>
+    <text
+       id="text5354"
+       y="204.69431"
+       x="119.72395"
+       style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.264583"
+         y="204.69431"
+         x="119.72395"
+         id="tspan5352"
+         sodipodi:role="line" /></text>
+    <g
+       style="stroke-width:1.23514"
+       transform="matrix(0.80962351,0,0,0.80962351,15.705274,97.678643)"
+       id="g5395">
+      <text
+         id="text5304"
+         y="193.01801"
+         x="74.907021"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         xml:space="preserve"><tspan
+           style="font-size:5.64444px;stroke-width:0.326798"
+           y="193.01801"
+           x="74.907021"
+           id="tspan5302"
+           sodipodi:role="line"><tspan
+             id="tspan5300"
+             style="font-weight:bold;stroke-width:0.326798">fr.wikipedia.org</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         x="103.41699"
+         y="180.67142"
+         id="text4594-9"><tspan
+           sodipodi:role="line"
+           id="tspan4592-7"
+           x="103.41699"
+           y="180.67142"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';text-align:center;text-anchor:middle;stroke-width:0.326798">Nom de domaine</tspan></text>
+      <path
+         sodipodi:nodetypes="ccc"
+         d="m 129.35047,189.02864 c 0,-8.67665 -26.4946,-0.51053 -26.85563,-7.77765 -0.36103,7.26712 -26.855622,-0.899 -26.855622,7.77765"
+         style="fill:none;stroke:#000000;stroke-width:0.864599;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path5162-8" />
+      <path
+         id="path5350"
+         style="fill:none;stroke:#000000;stroke-width:0.864601;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 117.20377,194.3735 c 0,5.7102 5.99171,0.33598 6.07335,5.11855 0.0817,-4.78257 6.07335,0.59165 6.07335,-5.11855"
+         sodipodi:nodetypes="ccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         x="99.321709"
+         y="203.09689"
+         id="text5358"><tspan
+           sodipodi:role="line"
+           id="tspan5356"
+           x="99.321709"
+           y="203.09689"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.326798">1<tspan
+   style="font-size:65%;baseline-shift:super;stroke-width:0.326798"
+   id="tspan5360">er</tspan> niveau :  .org</tspan></text>
+      <text
+         id="text5366"
+         y="214.94994"
+         x="95.901039"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.326798"
+           y="214.94994"
+           x="95.901039"
+           id="tspan5364"
+           sodipodi:role="line">2<tspan
+   id="tspan5362"
+   style="font-size:65%;baseline-shift:super;stroke-width:0.326798">ème</tspan> niveau :  wikipedia.org</tspan></text>
+      <path
+         sodipodi:nodetypes="cccsc"
+         d="m 85.717222,194.3735 v 10.31832 c 0,5.7102 21.523358,0.33598 21.816628,5.11855 0.29348,-4.78257 21.81662,0.59165 21.81662,-5.11855 V 194.3735"
+         style="fill:none;stroke:#000000;stroke-width:0.864601;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path5368" />
+      <path
+         id="path5370"
+         style="fill:none;stroke:#000000;stroke-width:0.864601;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 76.028744,194.37351 v 20.90165 c 0,5.7102 26.302476,0.33598 26.660866,5.11855 0.35865,-4.78257 26.66086,0.59165 26.66086,-5.11855 v -10.31832"
+         sodipodi:nodetypes="cccsc" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.326798"
+         x="88.492714"
+         y="225.53328"
+         id="text5376"><tspan
+           id="tspan5374"
+           x="88.492714"
+           y="225.53328"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.326798"
+           sodipodi:role="line">sous-domaine :  fr.wikipedia.org</tspan></text>
+    </g>
+    <text
+       id="text5399"
+       y="20.063072"
+       x="104.71777"
+       style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.2889px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         y="20.063072"
+         x="104.71777"
+         id="tspan5397"
+         sodipodi:role="line">DNS</tspan></text>
+    <text
+       transform="matrix(0.80962351,0,0,0.80962351,24.291947,126.44589)"
+       style="font-size:5.64444px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect5423);stroke-width:1.23514;"
+       id="text5421"
+       xml:space="preserve"><tspan
+         x="10.025391"
+         y="10.395502"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">La commande </tspan><tspan
+           style="font-weight:bold">nslookup</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514"> permet d'utiliser le protocole DNS pour trouver </tspan></tspan><tspan
+         x="10.025391"
+         y="17.647903"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">à quelle adresse IP correspond un nom de domaine (ou à quel domaine </tspan></tspan><tspan
+         x="10.025391"
+         y="24.900304"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:1.23514">correspond une adresse IP). Exemple :</tspan></tspan></text>
+    <g
+       transform="translate(-5.2916663)"
+       id="g5431">
+      <image
+         y="154.51103"
+         x="33.319813"
+         width="96.308334"
+         height="50.535416"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWwAAAC/CAYAAADaQuaMAAAABHNCSVQICAgIfAhkiAAAIABJREFU
+eJztnU9oG1ub5h+HS697eQfJYIOd+TrlxUAPI+SMaBkGBjsFHWgRMAZnmIUzIA32QheDSa9uCBRX
+0HaPRE+8mhiEIdQiA4q9dDUmMdrNwrq3Scxng1VMbwYaZjGr+9Us6o+qSlV1qlySpXKeHxwS69Q5
+5z2nSq9OvXXqOTN//OMfjd9//x2///47/vSnPznJMIzABMD5lxBCyP0xA8D48effJm0HIYQQAT/Y
+//nfr/8wSTsIIYQIeDRpAwghhMSDDpsQQjICHTYhhGQEOmxCCMkIdNiEEJIR6LAJISQj0GETQkhG
+oMMmhJCM8IP4EC/7/+2/p2pw57/+l1TlCSHkeyWxwwaA//AfV4XHtP7H/0T1P/21599//a/+7C7N
+EUIIwR1DIv/v//4fYfrPf/Pvh/4Vc4WDpzOYmbHS0wNcefJP8WrmFU59pU5fzeDVqf+4pzi48hyE
+mVenvjpO8Wpmxvo8rLx1jCs9PbjCEKevQo9JZp+/rlc4Den3dOI9h+5+n77yj8999itgzAnJGHdy
+2P/u3/7lnVIkVwd4OrOIX1+71AHfA5883+ZVPN86xEffN3z1+RYO3R9efcUlvuDDpyvXR5dYfrIY
+0PAyli/XMOSzfcfsf7PtOsHSzqLXyZ++wszapeuYb3jxYdFx2onsuzrA0zXgxB6Db0/w9TS43+kZ
+hxP7hsf2Ofy2j8s1yyFfHeDrc/cYvsTB1bj6RcjD5NFfTdoCAMAVDl7uYOnEwDt3tGVhG9u+6Mvq
+T/u49H/DF59g+fKrMxu/+vQBS/v7wK/fnPo/fQBePFsIbP3F631cvvHP5sNYxbtv+1g+/GjNDK9w
+8OYQWyefse1Uv4Dt9/vAzi/mMUns+/Yrviw/gfPTYo1BYL+nklWs2uds4TGW7I8953IRT5atozPT
+L0Imz6N/k8JjuzWy/Z8n4uoTPnzZwvOw0Pjpq0F4ZOEZXly+8c4KF57hBT7AnLCazu/Js8dYcpzq
+N/z6ZQmPg/01sLiN10s7eBl3qrnwDC+WrZlhmO0Lz/Bi+RJfrxLat/ocW18CbAnq91D4wfzbc7fg
+jJ3/2FO8mlnDIb5gZ9EVFro6wFNPOAZwZuKng7xXp8DVwVNBmOgjDreeY/i0uvob2K+gvt3BDldf
+nh58HbYv4Dizz2bbTl3u6y9wfAi5H+68rM8wDOdLMpKNDdyzykgWsP16yRNOABbweOmLNWH9hl/x
+As8WVvF8y3KYoY5jwOo7+zZ9lLbbNiWxbxXvrJCKNwYc0O/TX7CzdOL8cL5bXcD2a2/45fTjIbZe
+b2Nh6NhVvDNOsGWHe96tAjjFq8UPeGGHdk6AN86AfMHOG+C9YcA42cLh2gxe4r113Ba+2HcTcDnQ
+j8+ter2cvlrD5f5PVn+DzucVDp4u4sOLby57B2Maz45TvFo079oMw8B7fMBh4DkK6jOw/fkESzu/
+mM8P1oCTz9tYiBwfQsbPo//1j+krmZmZ8fwL3MF5f/kV38LyVt/B+LwNZ4K8+hxLHz55QhhOnPj0
+Iw6XHmMBwOIT4MOnq4j4tacRvDtZws4vcedMy3CqDLV9cEwy+xaw/dmOAbuctr/fi0+wfLjmnVWu
+PseWM3M/xcfLffy0GnKsHyu2vrNozSDXDvHFCdssY/+9dQ5Wn2MLy4MQ0+pzbMH68QGwsP3ZdGjP
+P2LGEyM3Z65vnnzD523X7Y6/X9Zdy+vtoFuimHZcfcXlstV3AAvbr7GVqM+reHcCrM2sASfvzB+X
+yPEhZPw8GoG/Hpphux13LNwhhlis4vnSDjy+1YoTn369xJYVn1h49gL49VNk/Npb7U/YFz6AhOVQ
+XLf0Qba7j7mrfQvbeL+/7Jox+/q9sI3PhoH3eOmaja/ip/1LvDm4wtXBG1y+eGY6t8Bjg9gaPPA0
+jMAZcmxW3+Fky76zuMLB05fAe8PrrIP6de8k6fMIx4eQhNw5JGKHQuzQiP2Zn7A4txfrVn7N50iu
+DnBwCm8M0WLoYdXCM7zADtZ2MJj5LjzG0uEOdqLi13473u/jcm0t5PYZGNxqv3Pd0m/hcM0dzzSP
+gXPbn8C+0wPPjPTThy+e2XfQQ7qF7c/4tr+MS2uKu/DsBfDhF/wS8EPgP9ab+RhLOEx3m3966hmH
+j4fWXcbpL9hZeo3ASbO/X9aPYCo7Fh5j6cvgR+Dq4I3rnLpWx4T22QqFGCeAfW5HMT6EpCDVq+l2
+DDssT3SMh9V3TgjAWYP8EngWNoEZeli1gGcvloHlFxj4qFU83wIgiF976zVntV5ct8Ezb/Dkm281
+y+o7GCfAmvMwag048c8kY9q3+hi/Om0tYmfpxFuPu9+u9dqLO0uDEMLCNl4vHeLQ7SADj13F8y33
+Q0dzBQx2FgfnQHi74WPxK954xsFcPXP19RI4XAtfz+45nwtWDHlgR1IzzJCGOQmYmZnBS7wIDokE
+9vkAB0/tOLt5x7L29ABXoxgfQlJi/Pjzb0Zc/u7v/8EAcKf0d3//D7HbicXJlrG8/220dWaBGP0+
+2YKxdXJP9oyK7/V8EhITZ9f0uJvwUkskA1wd4OlL4L37QS0hJPMk1hKhw51mzOVwO1+Wsf/tM501
+IQ+MO4k/kWnFXA64PWkzCCFjgXrYhBCSEeiwCSEkI9BhE0JIRqDDJoSQjECHTQghGYEOmxBCMgId
+NiGEZAQ6bEIIyQjOizOJJVEJIYTcK49O//Dnk7aBEEJIDB6t/tO/TNoGQgghMWAMmxBCMgIdNiGE
+ZAQ6bEIIyQh02IQQkhHosAkhJCPQYRNCSEagwyaEkIxAh00IIRmBDpsQQjICHTYhhGQEOmxCCMkI
+dNiEEJIR6LAJISQj0GETQkhGoB42IYRkBOphE0JIRhhpSERWNLRr0iirTIRUa0PTNDMp8sjrn3T/
+Js24x5cQEs0PQ5/ICrR6wflTV6vYaPZiVdY5UrG+twKp2UO8EqOl19xAuWk6ltbsBAx44HB8ZSha
+Ha5vB9TqBmJ+PR5AeTJpPDNsqdaGVs9DrZZRLpvpLTYRe1LZO8MFKtgMm3zJCrR2Dd/vHJVkFwm1
+dh15tep8N6oqUNmLez1nvTyZBlwzbBmblRy6jbLnF7fX3PXNliXU2i1UoKK60fTl9dA87kJbr0Hq
++PMAdHbRKGloabNolHfRCah39rgB1O1ZgH8GYLWdG5TqNsrY9VYUgb9812eHKD+oLttG236XPbIC
+bf3WGqc4/Utqv2WlMwZp+yeqX4ysaHBu0PSga0RYQcQdXoT9sgKtdAs1X0ElB3Qb9jiPahY5j9kc
+0L8ZVNQ7u4BemcU8EKOPWS9PpgXjx59/MyDVjLamGDJgIDJJRq2tGVq7ZkiB+bKhaG2jJoXXIdXa
+hjZ0jFWv63Op1jY0RfaWc/0dWf/QcWb97ZrkPc7phygfhqzY+ZatnjbMzxTZ1aasDNWvaYNj/PWL
+kqy42/TbO5r+hdcvGl9/+eG/hUlWAq6LmOdPVpyxlRX7Ogo4JymS97qVDUULHp+HWp5p8mkQEpmf
+hW9iFUIPzY0yyqEzpw6OVKASGhexYqGNPiotDf5nV93GYDbUu+kD+TnvLVuhhDs97pJWUMx1ceya
+avWax+jmiliRYuQ7zJuzvH4D5fhTewf3bDW4/tAOYC4PdM/tNns4u9CRm50fUf8E9QuRUSroUI8G
+Y9I5UqEnOF9yqQBdfRs8G45zfnQVRx3g+lYHusdOPfm50dz0u69bTasDjXLs5zsPoTyZPGN5caZ3
+diH+ol7fQgdQWI8fQ+s1N1BV86jfZaXC/Cxy+i2uvUbgVs9hdj5GvkWuUjfDIEfJnXU6erjpA4WS
+3WcJK8Uc9FvL4tT9E9QvQppDHjnLGVipVUEOecTzl+YPhvuW3UPM8zNOZEWD6efKKJcbQD3ZNZj1
+8mTyDBx25xxdFFAaxfnrNXHcLWA95GmlVGtDaxVxUY2aqYdVvWE9NKlCzdfjX3DXt9BzZrxuwDxm
+czpur2PkW+hq1ZqltOM/jA1DmkMefYT5qEAKdcshmrN8Z4Y0ov6F1i+id4M+dM8DazMlix+Hzobj
+2j8upBrWCzrUqh3z72C3qkIvrMe7DrJenkwFrhl2B+ddoFD3OiKppvhOqIRaWxOu9uicd5Errgwd
+IysaWpU+Ggm/yMOYt+zxDz/Dhe79EZGVOgr6Bc56MfLddHbNJ+wep+2boUo1tF0Pz4KQNyvIdc9D
+HmoOHY1SoWvNjqzkDsmk7p+gfiEdnHdzkaEwux+KpkHTFN8dmBWCqWwG35klOT93al9A7wZ95FB0
+x6/mZ5Eb+sENqT8z5ck041mH3dkt47rWRquloWJ9pqtVbNzlhHaOoK63sCk3Pasm6nkV1XLClQMA
+Alcw6CqqG52Q/LoZp+vaseYemhsNzGotaBV3edsWUb6XXnMDVZhjNWvFpTtHKtZbVrvoolFVsb7n
+LVeom7elAFy2xaGDI3UdLU1D3f3xyPonql80vkBnt4q5dsvqf/I+OmPqsmGwSiTZ+Rk9HexW59Bu
+udq3VqDE613Wy5NpwVwlMo6nmp5VEt97SrliQaoZ7aEVFOaT/pGsghh3/UxMTKnT8JuOo6SzizJ/
+vkdD0CoeaQ556Li4zkD9hJDUjNdhk9HR2UV1zhuuGumrxeOunxCSmhkAxo8//4Z//tu/mLQthBBC
+IqAeNiGEZATqYRNCSEbgFmEZYrr1qM31+VFmxbM/3jr/kUD1yERM9/X3feBz2NaXRRuk71mwf9qw
+3/KsqgleGJoism7/9w7P3+RxrRIxX4woXlRR5rIAMjFMcbHmpM0gZApxOexhvdwgovSOpVobe3iL
+t9hDy3olznlTTaqh3Sriwr1MLOCzO9fvEKXXnZaHrEct0usW6X0H9SHZskCp1nbOa+gbkil2RDKL
+u8YHAPRbj93j1WP3tx+ltx7EQ77+nAqmVA99enDedDR1hMPfbBPpHZt6uy6tbM/bc0n1mJPWbyeR
+Xvfd08PWoxbpdSfX+zY1qoc11kW65qH5kXrZSc9fmP3p9dij+uUeP1lJdp0+7OtPdH4nr4c+DckT
+w+7sllFudE29i6EHCzH1jt2/qr0b9J0MS9zHEYQy5Tu7x/YvcNr6B+1E63XflYevRw2k0eseLm8q
+QMaVVxUTqZctLj00PkGMTY8dZgzYPVPtnHcTlH7419+066FPA8NvOjqvk5sbdmrtOdNBWnrHBc+b
+cACgm19Iexz7Ny5H2cGu6930XvMY3UrJ3JLIPgGOdlP6+seLqcZXKclAxxRDWinmoNvvbQv1mgX5
+PUH9IuKMn1RDu1VxvYKe9JZ8klh62ecR3jqqf5aUbVRxEUPiVP6wjWh8h/LhCskIW8/+9RddQfT5
+nQI99Gkg4tV0W92riBWpiZ6ld3yRKh7UwXm3jpIMdDDrlRYdSf33QKE+UKPrNgYPaF16zQPz3XrN
+onxB/SLijF+viY1ygsd5I3ByoyYf9e1P2D9pLg8grsO0mzB3jrfjqZqCgdOObF9Cba8CqK6H+rIC
+bT1R89m+/mIQen5F/ftOnHbkOmxppYicozccV+84ms55F4WSDLmU992ejqb+8a3jfSh61PHx6nXf
+Qe9bqaPgujVNh0AvW1jcN/6yMnjAmcKe+Pgf6stQAscvTK/7oVx/k9ZDzzaDGXbg7Zr3KW9avWOz
+ElMnuw4VVd9Aj6T+sfHw9aiBaL3udHrfIvvF/YvWyxbRQ/OtiqKtB62rqDaAVuwZrkiPXUQHu40S
+NGd8dKgNFfnY7T/862+69dCnh/HpYT+k9OD1qB/eE/UHlR789ccUJ/HV9LhE6EWPZE/BcddPsg2v
+PwLKqybC82IHgFHrRY+7fkHrwy/GkKniYV9/JA502IQQkhEebf/VpE0ghBASh0cH/zhpEwghhMQh
+3UNHkZ4w9YYJIWRkDL/paK/H/k7XOKbDfJ3fpTWW8KFN1ssTQsbJ0AxbWikCagMqkon+EAm1dh15
+teq8KVZVgcpe3DuMrJcnhIwb3wzbFHzpH3dwhnXsrUho9rzTq3A9YXF+HD3raD1dkR5xHL3icell
+D+uJ984uoFf8+gcPtTwh5D4YvOko1Yy2rV/s0Qo2U7SesDhfpGcdSw/7LjrKnjQ+vWyzf3Z/zLfE
+gvSEH2p5Jiam8SZPSERaKQ7EfjrnPi1kkZ5wPL3hcD3rmHq6In1dof7uuPSyLSW3Rh+VlmbqKTTK
+iXZDyXp5Qsh4cTlsa0MBR8DcVN8q2h7bktoM3UFMlG8zpGdtPdSy9HRNZ2GlVgU5lwB+r7mBqppH
+PWTnZlH+uJEVU9jHVDxrAPVkNmS9PCFk/JghEalmtDVziydP8oQvvNs9ebboEeVDFLKQDSXR9k9W
+aCO0PlH+iFOQeE6goM4DLc/ExDT2NJhhz8+aS/ncerhVFbodFhHpCafWG06q5yzSIw7LH5Nedu8G
+fbjuSABLUMd/1xGiB5yZ8oSQSeGsEpFLBegXR964bu8MF3oFRWu1SLSecFq9YZGerkiPOK1ecVrs
+HXpcer3WOuZ4FmS9PCFk3FD8iRBCMgL1sAkhJCPQYRNCSEagwyaEkIxAh00IIRmBDpsQQjICHTYh
+hGQEOmxCCMkIdNiEEJIR6LAJISQj0GETQkhGoMMmhJCMQIdNCCEZgQ6bEEIyAh02IYRkBDpsQgjJ
+CHTYhBCSEeiwCSEkI9BhE0JIRqDDJoSQjECHTQghGYEOmxBCMsJ35LAl1NoaFPl+2tHaNUjjbmoq
+2yeEjIuBw5ZqaGsaNI9Hk6FobdQy9M2XFQ3tKTY4rX3T3j9CyPj4wfunDj2/jprUQbM3GYOyTw/N
+jTKa3237hJBx4QuJ9HF83EdxJWwGZ91ua3ZSIPvyFFmG4uQnn53Liqh+z8HOrb9Ua0PTNNQLQK7S
+GtQxFANx98FvX1T/zDbaNclpS9O8s1335/5249oX1v845aPaN++gfP0N+MzT/h3CKuLzF3V9+Md/
+cL6lWjvgXA7fcUTZLzp/HhsYUiJTivHjz78ZkGpGW1MMGbKhaIohAwYgG4rWNmoSDEAyam3NaNck
+A4ABwJBqbUNr1wwJg3zNOd7KV2TneFGSam1DkQd/y4o2VL87H7Liyh+Ucds4SLZ9gzq89on6Z/2t
+uWySakbb1V9PuZB+h9sn6r+4fHT74v7JiuYp5/97FOcv6vqIvF4CzrXdht2myP5458+yM6AtJqZJ
+p4CHjh0cqXms+2ce0gqKuS6OXbGSXvMY3VwR7gl5t7HhhFN6N30gPxd7ptJrbmC347LkvBuzZHy6
+jbLThse+mP2DrqK60UTPrAD9Edo23v73cHahI1dcsc6HhJViDt1jqy+QUSroUI8GBnSOVOiFEuI+
+p41jv/D6CGvv+ha69V97pgxImMvbB8S0X3j+zJBS2T6GkCnih6APe81j9NsrkJo3gw/nZ5HTb3Ht
+OfIat3oOs/NArKtbqqHdqiDnfNBFo7yLTmg+AP02RsUjIG7/+jeurnawW+5gZIy5/73mMbqVEuYB
+9OwfKNt8aQ555FBoaah4SumYk3DH84tE9veaG6iijZamoQ4A3QbKg19X9HMlzEPC3GwffaxAwhkA
+HbfXCewf5/kjZMwEOmygg/O+hk25Mfjo+hZ6bhZe3zyP2Zz1hYlDr4mNctjjMAm1vQqgVlG2p2Cy
+Am09Zt1pGUX/UnEf/e/gvFtHSQY6mEWuez74sezdoA8dF9WNOz5wHo39veYGzEtEQq3dgqZg4LQB
+QFrB7O0Rzmf3sCLdYDbXx3kPANLaT8j0E7oOu3OkIl8qDT7oneFCL3hCJbJSR0G/wNlIviDzmM0B
+/Ru7MhlKveDK7+GmDxRKzlMotD35Jte37tv+BIy9fyL7RP0XlY9H57yLQkmGXMp7wgemM8+hsnnX
+herx7I+PGcIZcI1bPY/SZhG46aFz3kdxs4S8c1eU1n4bPnQk00vIDBumA8u3UIEO86a2h+ZGA7Na
+C5p9z+mOB6amg91GCVpdg1YHAB1qQ0XeNUPrHKlYb9WhaXUAXTSqKtb3fGY330ItttCyjXTfVkeS
+tn/mjLDixAMsO33th9sn7n90+Xjto3MEdb2FOlRUfR3r7FYx125Z4wtf/SLi2R+O335Y42+33cNN
+P4dKoYvGLgCco1+vo9A9d85POvsJmX5mABg//vwb/vlv/2LSthBCCIngO3o1nRBCsg0dNiGEZAQ6
+bEIIyQiPTv/w55O2gRBCSAwerf7Tv0zaBkIIITFgSCRDRIo7EUIePA9OD/sh02tuoFwuo6rq4oMJ
+IQ8O3wzb1sOejDGEEELC8b3p2MfxMbC+IqHZC36/T1ZMTWYTl3iTrEAr3ULNV1DJAd1GA6jXUYAO
+1aXv4Ckf+Cah9cYbRvkW5agIeBsPbgVAf75P3Cpxvr9+MeLxFVYAzfVKua5WseGIc0TYH/P8E0LS
+EVMPW6B3LCuO1rSs2LrHXg3reHrL06tH7LXXry8dTy88vh718PGecgG60Wn1rM1zOKzvHat/Mc4/
+ExNTuhRfDxsx9I51FUcdU6AI3WNnVpWfkxBfb3la9YhN7eXu+UDb4uxCR2523soW6GkL9bYF9QtJ
+r2ctlwrQ1bfBs+E4euGR558Qkpb4ethAOr3jUegtTxRTLbBSkoGOKba0UsxBv7g2s0V62hDpbQvq
+F5F6fM0fjP55yIHC/hFCxk18Pey0esep9ZanhEJ9oAbXbQzGQqinHVNvO6x+ESMa33yYdxf1j06b
+kLETXw87td5xXL3iadUjllEqdNEol1G2kzs+JNLTFuptC+oXEnd87U1wlaFQ1NmFjlxlMziEck96
+4YSQcBLoYafVO866XnEHR+r6YPsqG8d+kZ62KF9Uv1jvOu34Dm3RBfcqkXHroRNC4mCuEpmCJ6BT
+nQJ32JYNRRvRKohx18/ExJT5xFfT4zI/i5z/M2kOeYxoz8dx108IyTzccSYBUq2NlncPq5G+FDLu
++gkh2YYOmxBCMgL1sAkhJCNQD5sQQjJCuoeOshK9XlqUTwghJDbD67Dt18+5xnYCyFC0OgZie26l
+PBcR5yiWWl+qc+xdD+610Wt/0ENTkX2p1QaBVOMTmh8ky5DYxvTjEz3+aRFff/dy/kgknnXYUq1t
+tGuyUWuHqba5kqxEq+qJ8pk8SVZca64D12XDsFXzFGV4bD3qibbqYYgaYlB5YZJqRjt0XXhMNcII
+++LZL0p3H5+k7SdTQ0w/PtHjP/7r737OH1NU8oVETMGh/k0HZxdAcWU4mCEr2mCbqoBX06PypVob
+7Zrk2eqq7VMF9JQfCqdYr61rg+TdKUuUn7Z+1zFjCPV0dl26170zXOi5oXMg1fZQgYqjc39pS63v
+revNyrcq9IJ3Q4rw8s4Rof2TN00tmeAXJ/3SBUDv7MLRHxHbF89+0fjffXzitu+r78g/GGH2pR0f
+0fjHG5+o/OjrbzTjF/39IyK8DtuS0DzvAL2bPnLFFc+AyoqGOhoDrYuGV15VlA8AuUoLreIFquUy
+ylUVqOwNLkhf+Ua/gpbLY0q1PVT6rvrLXmF/UX7a+u+X4S84pBr2KnB9KVzIJRTQh3O4cwvvUtOL
+Ki/E/EJeYNP1g+bePq6DI1VHod52vsBKqwKoR9YGBwL74tgvIs34JGxfqq2j4JKQFZNyfITjP2p8
+198Ixk/0/SNiPA5bWiki1z03L6DOuVfrOHRGETffwh3X6t2gH1E+UM9ZpO8cmj+i+u9Jr9sUVjL1
+pZ3PNitAmF41AOi3uLb35mwVcVGtwr39o7A8gOj+5VCZPXf9IPdRaQ1EpHrNDeszzdQzaZS9MVCB
+fcJ8gX1pxyde+wAgY7OCkGs93L7U4yMYf1H78fKtHgZcf+nGL71eO/E8dDTDId1je0A7OO/WB9uF
+SXPIo48wuWRhvk3/xnWhdLBb7rjKR+s5D4kT+YSNIvNHUP99IdXaqBd0qFXXl0pWUM+rqO5GDHCu
+glZLh1otW05LQi1JeSG+H+TOObr1dWf8zAdOpuJgx1YFLLnGMMq+OPlRpB2fBO1LtXUU9AscJRzK
+1OMjGP9REXj9xbEvKj/zevjTwcBhSyso5oCco8ZnkV+B1OwFjqc0lwcQvoGBKN9DTD3nXnMD5SZg
+Py3XFAw57cD8EdU/bszX0zG8eqBUAHIFtDT35W7+3W2UsXt9Cx0F9BuuctIKijkdF9eAvCkoH6uL
+9mYLgYZjvaBDrdp7VHawW51Du7WOmtRBU2AfIMqPJu34xG9fxmYlh24j4R1W6vEBIsd/RIRdf0g7
+fg9FD38KMFeJBK3o8Dwp9j3ltvbwC92zcCg/fC9COyXdg1BUnz9/NPWPcc/JyD0VA46NXAUh6G/o
+Cp7w/vnr965yMJUFPXtQyoqhOfuDiu2LZ3/M8b/D+MRp37+yYziF2Tf68Qm2RTQ+EfmC6y/t+CXe
+Y5RpKDkzbLlUgH5x5P3x7p3hQq+gaIVFmm9VFFuWHrKuotoAWo4etihfTLSec8CO4rqK6oY9NRTl
+p61/3Aw2hKh4bhv9O6uHY/fPmWWOOKQzVL9Pz9ucMbr0sq11xp2w8j777t3+pO1LNezdZXZt1j76
+8RnpOmfx9Zd2/LKthz8dUPyJEEIyAvWwCSEkI9BhE0JIRqDDJoSQjEA9bEIIyQjUwyaEkIzAkAgh
+hGSEYT1skoI4etb2eu+w9dV31zse3sQ3uV51NKL+pddTjkWknvc49aIJmTwePWymuyehnrX9JlnN
++4abk1LqHZta5lJIvliPOW3/0uopx0sRet5j1otmYpp0YkhkhETrCUuorQON8gaaN8Hl4+kd3xWR
+HrMYkV53Oj3leETpeY93/AiZPHTYY8PvIHtobkS9Yj5uvWOBHnNiAvS6o/LHrXd973rRhNw/jGGP
+CVtPuJrIG+ZQmT1GubxrVwKtpeAmppYIYG4Q4WhV+GK8veYGyjcKNEsrotso465SKaL+Bebbesmt
+CnLQoVarwF4Ls3HbtGbQzR4QfFuQfvwImWY4wx4Djp5w4p1dAvSOkTcKjqP1AAABa0lEQVT1gmPQ
+a254dstp9CtoubZhkhVTOrdRLqNcbgB1DdoddvwQ9S80P1dBq1XERbWMcjmhzKald/02slC68SNk
+2qHDHjGhesKxSBAeiEHnvAvYMepAPea7xJCj+xetpwx0A/SSb6/F7Zp61xW03PuFWn8PfnNGO36E
+TBt02KNEVlI46w7Ou0BhfTAjtnc2OfPUZe1Uovm3hvIjobZeAOwt33o36MO3qe/8LHLuuLKoflH/
+ovJ7TRz7+idvVpAb2hcxuP3Obtlz91BudM2Qj7PvZtzxIyS7MIY9MsR6wp41yADqmoZ6lN5wonXK
+w3reulpF2fGGYj3mdP1Lr6eclvHqRRMyeaiHTQghGYEhEUIIyQh02IQQkhHosAkhJCNQD5sQQjIC
+9bAJISQjMCRCCCEZgQ6bEEIyAh02IYRkBDpsQgjJCHTYhBCSEeiwCSEkI9BhE0JIRqDDJoSQjECH
+TQghGYEOmxBCMsL/ByZG4qPv9HXEAAAAAElFTkSuQmCC
+"
+         id="image5411" />
+      <rect
+         style="opacity:1;fill:#000000;stroke:none;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+         id="rect5427"
+         width="19.745371"
+         height="4.7622585"
+         x="83.087341"
+         y="167.11118" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:4.56986px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="125.64137"
+       y="194.25774"
+       id="text5241-1"><tspan
+         sodipodi:role="line"
+         x="125.64137"
+         y="194.25774"
+         style="stroke-width:0.264583"
+         id="tspan5260-2"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.264583"
+           id="tspan5264-0">adresse IPv6 de google.com</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="125.64137"
+         y="200.12944"
+         style="stroke-width:0.264583"
+         id="tspan5258-7"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.264583"
+           id="tspan5266-3">adresse IPv4 de google.com</tspan></tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       id="path5464"
+       d="m 123.51049,192.86629 -16.92769,1.98133"
+       style="fill:none;stroke:#ffffff;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend)" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#ffffff;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5530)"
+       d="m 123.57405,199.10057 -44.235999,1.09194"
+       id="path5526" />
+    <text
+       id="text5614"
+       y="176.33261"
+       x="125.64137"
+       style="font-size:4.56986px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan5612"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.264583"
+         y="176.33261"
+         x="125.64137"
+         sodipodi:role="line">adresse IP du serveur DNS</tspan><tspan
+         id="tspan5620"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.264583"
+         y="182.20432"
+         x="125.64137"
+         sodipodi:role="line">auquel on pose la question</tspan></text>
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5632)"
+       d="m 123.51049,176.99128 -56.231952,1.67001"
+       id="path5628"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="ccc"
+       d="m 77.587297,169.00086 c 0,-3.77658 -20.024588,-0.22222 -20.297456,-3.38528 -0.272868,3.16306 -20.297462,-0.3913 -20.297462,3.38528"
+       style="fill:none;stroke:#ffffff;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5716" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path5739"
+       d="m 123.55333,164.67684 -61.898252,1.07451"
+       style="fill:none;stroke:#ffffff;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5743)" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.56986px;line-height:1.25;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="124.64675"
+       y="165.80363"
+       id="text5821"><tspan
+         sodipodi:role="line"
+         x="124.64675"
+         y="165.80363"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';stroke-width:0.264583"
+         id="tspan5819">commande exécutée</tspan></text>
+  </g>
+</svg>
