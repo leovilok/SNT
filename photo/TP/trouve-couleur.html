@@ -1,0 +1,116 @@
+<canvas id="trouve-couleur" width="300" height="150"></canvas>
+<script type="text/javascript">
+    var canvas = document.getElementById('trouve-couleur');
+    var ctx = canvas.getContext('2d');
+    var score = 0;
+    var win = false;
+
+    function float8_to_val(num) {
+        let val = Math.round(num) * 32;
+        if (val == 256) {
+            return 255;
+        }
+        return val
+    }
+
+    function new_color() {
+        return 'rgb('
+               + float8_to_val(Math.random() * 8) + ','
+               + float8_to_val(Math.random() * 8) + ','
+               + float8_to_val(Math.random() * 8) + ')';
+    }
+
+    var target = new_color();
+
+    var r=0;
+    var g=0;
+    var b=0;
+
+    var color = 'rgb(0,0,0)';
+
+    function update_color() {
+        color = 'rgb(' + r + ',' + g + ',' + b + ')';
+    }
+
+    function draw_rect(x,y,w,h,c) {
+        ctx.beginPath();
+        ctx.fillStyle = c;
+        ctx.rect(x,y,w,h)
+        ctx.fill();
+        ctx.stroke();
+    }
+    
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.strokeStyle = 'rgb(255,255,255)';
+        ctx.font = '20px sans'
+        
+        draw_rect(10, 10, 90, 100, target);
+
+        draw_rect(100, 10, 90, 100, color);
+
+        draw_rect(210, 10, 80, 30, 'rgb(0,0,0)');
+        draw_rect(210, 10, (r * 5) / 16, 30, 'rgb(' + r + ',0,0)');
+        ctx.fillStyle = 'rgb(255,255,255)';
+        ctx.fillText('R: ' + r, 220, 30);
+        
+        draw_rect(210, 60, 80, 30, 'rgb(0,0,0)');
+        draw_rect(210, 60, (g * 5) / 16, 30, 'rgb(0,' + g + ',0)');
+        ctx.fillStyle = 'rgb(255,255,255)';
+        ctx.fillText('V: ' + g, 220, 82);
+        
+        draw_rect(210, 110, 80, 30, 'rgb(0,0,0)');
+        draw_rect(210, 110, (b * 5) / 16, 30, 'rgb(0,0,' + b + ')');
+        ctx.fillStyle = 'rgb(255,255,255)';
+        ctx.fillText('B: ' + b, 220, 132);
+
+        ctx.fillStyle = 'rgb(0,0,0)';
+        ctx.fillText(score + '/3', 130, 135);
+    }
+
+    draw();
+
+    function x2col(x) {
+        return float8_to_val((x-210) / 10);
+    }
+
+    function handle_click(e) {
+        let x = e.clientX - canvas.offsetLeft;
+        let y = e.clientY - canvas.offsetTop;
+
+        if (win) {
+            win = false;
+            target = new_color();
+            draw();
+        }
+
+        if (x >= 210 && x < 290) {
+            if (y >= 10 && y < 40) {
+                r = x2col(x);
+                update_color();
+            } else if (y >= 60 && y < 90) {
+                g = x2col(x);
+                update_color();
+            } else if (y >= 110 && y < 140){
+                b = x2col(x);
+                update_color();
+            }
+            
+            if (target == color) {
+            	score += 1;
+                draw();
+            	ctx.fillStyle = 'rgb(0,0,0)';
+            	ctx.fillText('OK', 40, 135);
+            	win = true;
+            } else {
+                draw();
+            }
+        }
+    }
+
+    canvas.addEventListener('click', handle_click);
+    
+</script>
+
+
