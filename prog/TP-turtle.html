@@ -1,0 +1,169 @@
+<h1 id="le-module-turtle">Le module <code>turtle</code></h1>
+<p>Le module python <code>turtle</code> permet de dessiner des formes en faisant bouger une flèche (historiquement c’était une tortue).</p>
+<p>Ça va nous permettre de voir les bases de la programmation en Python.</p>
+<ol type="1">
+<li>Ouvrez l’<strong>éditeur Mu</strong> en mode Python3 (c’est le mode de base).</li>
+<li>Créez un nouveau fichier avec le bouton <em>Nouveau</em> et enregistrez-le.</li>
+<li>Écrivez <code>from turtle import *</code> sur la première ligne pour charger la bibliothèque</li>
+<li>Lancez votre script (bouton <em>Lancer</em>)</li>
+</ol>
+<p>Il ne se passe rien sauf qu’une fenêtre devrait s’ouvrir en base de l’écran avec les caractères <code>&gt;&gt;&gt;</code>. C’est la <strong>console Python</strong>, c’est là que sont affichés les messages (par exemples les messages d’erreur), mais on peut aussi y écrire du code python qui sera exécuté directement sans être enregistré dans le programme.</p>
+<ol start="5" type="1">
+<li>Écrivez <code>forward(100)</code> dans la consle et appuyez sur <em>Entrée</em>.</li>
+</ol>
+<p>Une fenêtre devrait s’ouvrir avec une flèche qui dessine un trait. En fait on a fait avancer la tortue (<code>forward</code> = <em>en avant</em> en anglais) d’une distance de 100 pixels, et elle dessine son chemin.</p>
+<p>Voici quelques fonctions de base pour manipuler la tortue :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>forward(distance)  <span class="co"># faire avancer la tortue</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>backward(distance) <span class="co"># faire reculer la tortue</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>right(angle) <span class="co"># faire se tourner la tortue vers sa droite</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>left(angle)  <span class="co"># faire se tourner la tortue vers sa gauche</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ces angles sont donnés en degrés</span></span></code></pre></div>
+<ol start="6" type="1">
+<li>Essayez ces fonctions dans la console (en mettant des nombres à la place de <code>distance</code> et <code>angle</code>).</li>
+</ol>
+<h1 id="séquence-dinstructions">Séquence d’instructions</h1>
+<p>On veut faire dessiner des formes géométriques simples à la tortue, voici un programme qui dessine un triangle équilatéral :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>forward(<span class="dv">100</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>left(<span class="dv">120</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>forward(<span class="dv">100</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>left(<span class="dv">120</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>forward(<span class="dv">100</span>)</span></code></pre></div>
+<ol type="1">
+<li>Modifiez le code pour dessiner un carré.</li>
+<li>modifiez le code pour dessiner une maison (un carré avec un triangle dessus).</li>
+</ol>
+<h1 id="variables">Variables</h1>
+<p>Une variable est une boîte qui a un nom et qui contient une valeur (un nombre, du texte, etc.). Par exemple dans ce code :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>truc <span class="op">=</span> <span class="dv">42</span></span></code></pre></div>
+<p>On crée une variable qui s’appelle <code>truc</code> (c’est son <em>nom</em>) et qui contient <code>42</code> (c’est sa <em>valeur</em>).</p>
+<p>On peut ensuite écrire le nom de la variable dans le code et il sera remplacé par la valeur de la variable à l’exécution.</p>
+<p>Exemple :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>taille <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(taille) <span class="co"># affiche le contenu de la variable dans la console</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>forward(taille) <span class="co"># la tortue va avancer de 100 pixels</span></span></code></pre></div>
+<ol type="1">
+<li>Crééz une variable <code>taille</code> en lui donnant comme valeur 80</li>
+<li>Modifiez le code qui dessine le carré ou celui qui dessine le triangle pour que chaque <code>forward(100)</code> soit remplacé par <code>forward(taille)</code>.</li>
+<li>Lancez le programme, puis modifiez la valeur de la variable et relancez le programme</li>
+</ol>
+<p>Ça devrait avoir dessiné la forme à des tailles différentes.</p>
+<h1 id="entrée-de-lutilisateur">Entrée de l’utilisateur</h1>
+<p>En plus d’envoyer des messages dans la console en utilisant <code>print()</code>, on peut demander à l’utilisateur de taper du texte dans la console pour le récupérer.</p>
+<p>Pour cela on utilise la fonction <code>input()</code>, exemple :</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On récupère une chaîne de caractères et on la met dans une variable &#39;nom&#39;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>nom <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Écris ton nom : &quot;</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># On affiche le contenu de cette variable dans la console</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Bonjour&quot;</span>, nom)</span></code></pre></div>
+<ol type="1">
+<li>Testez ce code dans la console ou dans un nouveau programme.</li>
+</ol>
+<p>La valeur de retour de <code>input()</code> (donc dans l’exemple le contenu de <code>nom</code>) est du texte. Pour le transformer en nombre il faut ajouter un appel à <code>int()</code> de cette manière :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&quot;Écris un nombre : &quot;</span>))</span></code></pre></div>
+<p>Maintenant le contenu de la variable sera un nombre, et la variable pourra être utilisée dans le code là où on a besoin d’un nombre.</p>
+<ol start="2" type="1">
+<li>Reprenez le code qui dessine une forme avec une variable <code>taille</code> : modifiez la ligne où vous créez la variable pour y mettre une valeur obtenue avec <code>int(input())</code> au lieu d’un nombre écrit directement dans le code.</li>
+</ol>
+<h1 id="instructions-conditionnelles">Instructions conditionnelles</h1>
+<p>On peut vouloir exécuter des lignes de code seulement dans certaines conditions, <em>si</em> une variable a la bonne valeur par exemple. On utilise alors une structure <strong>conditionnelle</strong> (<em>si … alors … sinon …</em>).</p>
+<p>Exemple en python :</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&quot;Écris un nombre&quot;</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># attention à bien mettre 2 signes &#39;=&#39; et un &#39;:&#39; à la fin</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> nombre <span class="op">==</span> <span class="dv">42</span>:</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>   <span class="co"># ça ne sera exécuté que si le nombre est 42</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>   <span class="co"># le code est &quot;décalé&quot; à droite, on dit qu&#39;il est &quot;indenté&quot;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(<span class="st">&quot;Ton nombre est 42&quot;</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Au revoir&quot;</span>) <span class="co"># ce code est aligné à gauche, il est en dehors du &#39;if&#39;</span></span></code></pre></div>
+<p>Exemple avec un <em>sinon</em> :</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>prenom <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Ton prénom : &quot;</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> prenom <span class="op">==</span> <span class="st">&quot;Léo&quot;</span>:</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;tu as le meilleur prénom&quot;</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Tu as un prénom moyen ...&quot;</span>)</span></code></pre></div>
+<p>On peut changer la couleur du trait de la tortue avec la fonction <code>color()</code>.</p>
+<p>Par exemple :</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>color(<span class="st">&quot;red&quot;</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>forward(<span class="dv">100</span>)</span></code></pre></div>
+<p>dessinera un trait rouge.</p>
+<ol type="1">
+<li>Dans le code dessinant une forme dont la tille est demandée à l’utilisateur, changez la couleur à rouge si la taille est supérieure (signe <code>&gt;</code>) à 100.</li>
+<li>Créez une variable <code>forme</code> où vous demanderez à l’utilisateur d’écrire du texte (donc avec <code>inpu()</code> mais sans <code>int()</code>). Si le texte est <code>"carre"</code> dessinez un carré, sinon dessinez un triangle.</li>
+</ol>
+<h1 id="boucles-for">Boucles <code>for</code></h1>
+<p>Les boucles <code>for</code> permettent de répetter une action ou une séquence d’actions un nombre précis de fois, exemple :</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># affiche 10 fois &quot;lol&quot; dans la console</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;lol&quot;</span>)</span></code></pre></div>
+<p>On remarque qu’on a encore une fois une ligne qui finit par ‘:’, suivie d’un bloc de code indenté (une suite de lignes décalées à droite).</p>
+<p>On peut s’en servir pour dessiner le carré plus efficacement :</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    forward(<span class="dv">100</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    left(<span class="dv">90</span>)</span></code></pre></div>
+<ol type="1">
+<li>Utilisez une boucle for pour dessiner une étoile à 5 branches (l’angle est de 144°)</li>
+<li>Dessinez une étoile à 36 branches (170°)</li>
+<li>Dessinez une ligne de 10 carrés de 10 px de coté.</li>
+<li>dessinez une grille de 10x10 carrés chacun de 10px de coté.</li>
+</ol>
+<h1 id="boucles-while">Boucles <code>while</code></h1>
+<p>Parfois on veut répéter une action, mais on ne sais pas encore combien de fois, alors on ne peut pas utiliser de boucle <code>for</code>, il faut vérifier à chaque répétition si on veut s’arrêter ou non : c’est ce à quoi sert la boucle <code>while</code> (boucle <em>tant que</em>).</p>
+<p>Exemple :</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&quot;choisis un nombre : &quot;</span>))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> nombre <span class="op">!=</span> <span class="dv">42</span>: <span class="co"># &#39;!=&#39; veut dir &#39;est différent de&#39;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Mauvais nombre, essaye encore&quot;</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># il faut maintenant changer la variable nombre,</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># sinon on ça recommence à l&#39;infini !</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    nombre <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&quot;re-choisis un nombre : &quot;</span>))</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Si on est ici c&#39;est qu&#39;on a réussi à sortir de la boucle while</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;bravo, tu as choisi 42 !&quot;</span>)</span></code></pre></div>
+<ol type="1">
+<li>Dans le code où on demande la taille pour dessiner une forme, redemandez la taille tant qu’elle est inférieure à 10 (et affichez “taille trop petite”), puis seulement quand la taille est assez grande, dessinez la forme.</li>
+</ol>
+<p>On peut faire un boucle qui ne se termine jamais et continue à l’infini en écrivant <code>while True:</code> (tant que <em>vrai</em>, et True sera toujours <em>vrai</em>).</p>
+<p>On peut éffacer l’écran et remettre la tortue au départ avec <code>reset()</code>.</p>
+<ol start="2" type="1">
+<li>Écrivez un programme qui demande à l’utilisateur une forme (entre triangle et carré) et une taille et qui <code>reset()</code> l’écran et dessine cette forme. Une fois la forme dessinée, ça doit recommencer et directement redemander une forme. (indice : il faut mettre tout le code de demande à l’utilisateur, dessin, etc. dans une boucle <code>while True:</code>)</li>
+</ol>
+<h1 id="fonctions">Fonctions</h1>
+<p>Une fonction est un bloc de code qu’on met de coté pour l’utiliser plus tard. Le moment ou on l’écrit et le met de coté s’appelle la <em>définition</em>, le moment où on l’utilise s’appelle <em>l’appel</em> de fontion.</p>
+<p>On a appelé plein de fonctions depuis le début, par exemple <code>forward(100)</code> est un appel de fonction, mais ces fonctions sont définies par d’autres personnes dans le module <code>turtle</code>.</p>
+<p>Voyons comment définir nous même une fonction :</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> turtle <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># On définit une fonction trait, elle n&#39;est pas appellée pour l&#39;instant</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> trait():</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    forward(<span class="dv">100</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    backward(<span class="dv">100</span>) <span class="co"># pour revenir au début</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># on appelle cette fonction, ça dessine un trait maintenant</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>trait()</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># on peut l&#39;appeler plusieurs fois :</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    trait()</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    left(<span class="dv">36</span>)</span></code></pre></div>
+<ol type="1">
+<li>Mettez le code pour dessiner un carré dans une fonction <code>carre</code> et celui pour dessiner un triangle dans une fonction <code>triangle</code>, appelez ces fonction dans la boucle <code>while</code> ou lieu d’y mettre directement le code pour dessiner les formes.</li>
+</ol>
