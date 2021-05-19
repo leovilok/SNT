@@ -1,0 +1,286 @@
+<head>
+
+<meta charset="utf-8"/>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+
+<style>
+h1,h2 {
+    font-family: Sans;
+}
+
+.stderr {
+    background-color: #fee;
+    color: #900;
+}
+
+.stderr, .stdout {
+    /* display: contents; */ /* uncomment to make print( end='') work */
+    margin: 0px;
+    padding: 0px 0.3em;
+}
+
+.console {
+    max-height: 20em;
+    overflow: auto;
+    border: medium solid black;
+}
+
+.console:empty {
+    display: none;
+}
+
+#feedback {
+    border: solid #aaa;
+    background-color: #eee;
+}
+
+#feedback:empty {
+    display: none;
+}
+
+</style>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/brython@3.9.3/brython.js"></script>
+<script src="https://unpkg.com/brython@3.9.3/brython_stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-python.min.js"></script>
+
+<script type="text/javascript">
+
+code = "# Écrivez votre code python ici :\nprint(\"Bonjour !\")";
+
+score = 0;
+
+API = window.API || window.parent.API;
+
+function loadSCO() {
+    if (API) {
+        API.LMSInitialize("");
+
+        suspend_data = API.LMSGetValue("cmi.suspend_data");
+
+        if (suspend_data) {
+            code = suspend_data;
+        }
+    }
+}
+
+function sendSCO() {
+    if (API) {
+        API.LMSSetValue("cmi.core.score.raw", score);
+        API.LMSSetValue("cmi.suspend_data", code);
+        API.LMSSetValue("cmi.core.score.lesson_status", "completed");
+
+        API.LMSCommit("");
+    }
+}
+
+function nextSCO() {
+    if (API) {
+        API.LMSSetValue("nav.event","continue"); // Probably Moodle specific
+        API.LMSFinish("");
+    }
+}
+
+// Leaflet stuff
+
+cognac = [45.69, -0.32];
+
+markers = [];
+click_latlng = {"lat":45.69, "lng":-0.32};
+click_func = function() {};
+
+function clear_map() {
+    while (markers.length > 0) {
+        markers.pop().remove();
+    }
+}
+
+function on_map_click(e) {
+    document.getElementById("lastclick").innerHTML = e.latlng.lat+", "+e.latlng.lng;
+    click_latlng = e.latlng;
+    click_func();
+}
+
+window.onload = function() {
+    loadSCO();
+    document.getElementById("code").textContent = code;
+    
+    map = L.map('map').setView([0,0], 1);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    map.on("click", on_map_click);
+
+    brython();
+}
+</script>
+
+<script type="text/python">
+# Requires Brython and Ace editor
+
+from browser import document, window, html
+from sys import stderr, stdout, settrace
+from traceback import print_exc, extract_stack, extract_tb
+
+def make_max_line_tracer(maxlines):
+    lines = 0
+    def tracer(frame, event, arg):
+        nonlocal lines
+        if event == 'line':
+            lines += 1
+            if lines >= maxlines:
+                raise TimeoutError
+        return tracer
+    return tracer
+
+def exec_code(editor, id):
+    effacer()
+    
+    console = document[id + "_console"]
+    console.clear()
+    stderr.write = lambda data : console_target(data, console, True)
+    stdout.write = lambda data : console_target(data, console)
+
+    code = editor.getValue()
+    try:
+        compiled = compile(code, "<" + id + ">", "exec")
+    except SyntaxError:
+        print_exc(limit=0)
+        return
+
+    settrace(make_max_line_tracer(10000)) # increase to allow longer execution
+    try:
+        exec(code)
+    except TimeoutError:
+        settrace(None)
+        print("L'exécution prend trop de temps, abandon.", file=stderr)
+    except Exception as e:
+        settrace(None)
+        tb_len = len(extract_tb(e.__traceback__)) - len(extract_stack())
+        print_exc(limit=-tb_len)
+    finally:
+        settrace(None)
+
+    window.code = code
+    window.score = check()
+    window.sendSCO()
+
+def console_target(data, elt, err=False):
+    elt <= html.PRE(data, Class="stderr" if err else "stdout")
+    elt.scrollTop = elt.scrollHeight
+
+breditors = document.select(".breditor")
+
+for ed_elt in breditors:
+    editor = window.ace.edit(ed_elt.id)
+    editor.session.setMode("ace/mode/python")
+    #editor.setOption('fontSize', '14px')
+    editor.setOption('maxLines', 15)
+
+    console = html.DIV(Class="console", id=ed_elt.id + "_console")
+
+    ed_elt.insertAdjacentElement('afterend', console)
+
+    exec_button = html.BUTTON("Exécuter →")
+    exec_button.bind("click", lambda ev : exec_code(editor, ed_elt.id))
+    ed_elt.insertAdjacentElement('afterend', exec_button)
+
+def feedback(msg):
+    document["feedback"].clear()
+    document["feedback"] <= msg
+    
+markers = window.markers
+L = window.L
+map = window.map
+
+def marqueur(lat, lon, message=None):
+    mark=L.marker((lat, lon)).addTo(map)
+    markers.append(mark)
+
+    if message:
+        mark.bindPopup(message)
+
+def cercle(lat, lon, rad, col='red', message=None):
+    mark=L.circle((lat, lon),
+                {"color": col,
+                 "fillColor": col,
+                 "fillOpacity": 0.5,
+                 "radius": rad}
+                 ).addTo(map)
+    markers.append(mark)
+
+    if message:
+        mark.bindPopup(message)
+    
+
+def dernier_clic():
+    return window.click_latlng["lat"], window.click_latlng["lng"]
+
+def au_clic(func):
+    window.click_func = func
+
+def effacer():
+    window.clear_map()
+
+def check():
+    score = 0
+
+    if len(markers) == 0:
+        feedback("Aucun marqueur placé")
+    elif len(markers) > 1:
+        feedback("Trop de marqueurs placés")
+    else:
+        latlng = markers[0].getLatLng()
+        coords = [latlng["lat"], latlng["lng"]]
+
+        if coords == window.cognac:
+            score = 100
+            feedback("Le marqueur semble bien placé, bravo ! ")
+            document["feedback"] <= html.BUTTON("Passer à la suite", onclick="nextSCO();")
+        elif coords[0] == window.cognac[0]:
+            score = 75
+            feedback("Bonne latitude, mais mauvaise longitude")
+        elif coords[1] == window.cognac[1]:
+            score = 75
+            feedback("Bonne longitude, mais mauvaise latitude")
+        else:
+            score = 30
+            feedback("Le marqueur est aux mauvaises coordonnées")
+    return score
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Placer un point sur une carte en Python</h1>
+
+On veut placer un marqueur à des coordonnées géographiques
+précises sur une carte numérique.
+<br/>
+On a besion de la fonction <code>marqueur(latitude,longitude)</code>,
+qui place un point aux coordonnées qu'on lui donne en paramètres
+(c'est à dire entre les parenthèses).
+<br/>
+<b>
+Modifiez le code python sous la carte pour afficher un marqueur aux
+coordonnées 45.69, -0.32.
+</b>
+
+<h2>Carte OpenStreetMap</h2>
+
+<div id = "map" style = "width: 900px; height: 580px"></div>
+
+<button onclick="clear_map();">Tout effacer sur la carte</button>
+Coordonnées du dernier clic :
+<span id="lastclick"></span>
+
+<h2>Code Python</h2>
+
+<pre id="code" class="breditor"></pre>
+<div id="feedback"></div>
+
+</body>
+</html>

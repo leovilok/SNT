@@ -1,0 +1,59 @@
+<manifest identifier="lvgx.SNT.geo.prog" version="1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+<metadata>
+<schema>ADL SCORM</schema>
+<schemaversion>1.2</schemaversion>
+</metadata>
+
+<organizations default="lvgx">
+    <organization identifier="lvgx">
+        <title>Programmation sur des cartes numériques</title>
+        <item identifier="point_item" identifierref="point_res">
+            <title>Placer un point en python</title>
+        </item>
+        <item identifier="pays_item" identifierref="pays_res">
+            <title>Des marqueurs avec des messages</title>
+        </item>
+        <item identifier="meridien_item" identifierref="meridien_res">
+            <title>Une ligne de marqueurs</title>
+        </item>
+        <item identifier="cercle_item" identifierref="cercle_res">
+            <title>Placer un cercle</title>
+        </item>
+        <item identifier="souris_item" identifierref="souris_res">
+            <title>Un marqueur se met à la position de la souris</title>
+        </item>
+        <item identifier="suivi_item" identifierref="suivi_res">
+            <title>Un marqueur suit la souris</title>
+        </item>
+        <item identifier="random_item" identifierref="random_res">
+            <title>Fin de l'activité</title>
+        </item>
+    </organization>
+</organizations>
+
+<resources>
+    <resource identifier="point_res" type="webcontent" adlcp:scormtype="sco" href="point.html">
+        <file href="point.html"/>
+    </resource>
+    <resource identifier="pays_res" type="webcontent" adlcp:scormtype="sco" href="pays.html">
+        <file href="pays.html"/>
+    </resource>
+    <resource identifier="meridien_res" type="webcontent" adlcp:scormtype="sco" href="meridien.html">
+        <file href="meridien.html"/>
+    </resource>
+    <resource identifier="cercle_res" type="webcontent" adlcp:scormtype="sco" href="cercle.html">
+        <file href="cercle.html"/>
+    </resource>
+    <resource identifier="souris_res" type="webcontent" adlcp:scormtype="sco" href="souris.html">
+        <file href="souris.html"/>
+    </resource>
+    <resource identifier="suivi_res" type="webcontent" adlcp:scormtype="sco" href="suivi.html">
+        <file href="suivi.html"/>
+    </resource>
+    <resource identifier="random_res" type="webcontent" adlcp:scormtype="sco" href="random.html">
+        <file href="random.html"/>
+    </resource>
+</resources>
+
+</manifest>
