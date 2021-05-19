@@ -1,0 +1,45 @@
+<manifest identifier="lvgx.SNT.geoloc" version="1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+<metadata>
+<schema>ADL SCORM</schema>
+<schemaversion>1.2</schemaversion>
+</metadata>
+
+<organizations default="lvgx">
+    <organization identifier="lvgx">
+        <title>Géolocalisation</title>
+        <item identifier="intro_item" identifierref="intro_res">
+            <title>Géolocalisation</title>
+        </item>
+        <item identifier="coordonnees_item" identifierref="coordonnees_res">
+            <title>Coordonnées</title>
+        </item>
+        <item identifier="trilateration_item" identifierref="trilateration_res">
+            <title>Trilatération</title>
+        </item>
+    </organization>
+</organizations>
+
+<resources>
+    <resource identifier="intro_res" type="webcontent" adlcp:scormtype="sco" href="intro.html">
+        <file href="intro.html"/>
+        <file href="GPS24goldenSML-CCBYSA-Paulsava.gif"/>
+    </resource>
+    <resource identifier="coordonnees_res" type="webcontent" adlcp:scormtype="sco" href="coordonnees/coordonnees.html">
+        <file href="coordonnees/coordonnees.html"/>
+        <file href="coordonnees/equirect-map-latitude.png"/>
+        <file href="coordonnees/equirect-map-longitude.png"/>
+        <file href="coordonnees/equirect-map-coordonnees.png"/>
+    </resource>
+    <resource identifier="trilateration_res" type="webcontent" adlcp:scormtype="sco" href="trilateration/trilateration.html">
+        <file href="trilateration/trilateration.html"/>
+        <file href="trilateration/equirect-map-bg.png"/>
+        <file href="trilateration/gps-sat.png"/>
+        <file href="trilateration/temps.png"/>
+        <file href="trilateration/trilat-1.png"/>
+        <file href="trilateration/trilat-2.png"/>
+        <file href="trilateration/trilat-3.png"/>
+    </resource>
+</resources>
+
+</manifest>
