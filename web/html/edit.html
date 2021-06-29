@@ -1,0 +1,57 @@
+<head>
+<meta charset="UTF-8">
+<style type="text/css" media="screen">
+    #edcontainer {
+        display: flex;
+    }
+    .edcolumn {
+        flex: 50%;
+    }
+    #editor {
+        width: 100%;
+    }
+    #editout {
+        width: 100%;
+    }
+</style>
+</head>
+
+<div id="edcontainer">
+    <div class="edcolumn">
+        Code HTML :
+        <div id="editor"></div>
+    </div>
+    <div class="edcolumn">
+        Résultat :
+        <iframe id="editout"></iframe>
+    </div>
+</div>
+<div id="stats"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-html.min.js"></script>
+<script>
+    var editor = ace.edit("editor");
+    var iframe = document.getElementById("editout");
+
+    editor.setOption('maxLines', 15)
+    editor.session.setMode("ace/mode/html");
+
+    editor.session.on('change', function() {iframe.srcdoc = editor.getValue();});
+
+    iframe.onload = function() {
+        var doc = iframe.contentDocument;
+        var stats = document.getElementById("stats");
+
+        var num_bold = doc.getElementsByTagName("b").length;
+        stats.innerHTML = "Nombre de gras : " + num_bold;
+
+        for(t of doc.getElementsByTagName("*"))
+            stats.insertAdjacentHTML("beforeend", "<p>"+t.tagName+"</p>");
+
+        
+    }
+
+    editor.setValue("lol")
+</script>
+

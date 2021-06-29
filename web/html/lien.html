@@ -1,0 +1,153 @@
+<head>
+
+<meta charset="utf-8"/>
+
+<style type="text/css" media="screen">
+    #edcontainer {
+        display: flex;
+    }
+    .edcolumn {
+        flex: 50%;
+    }
+    #editor {
+        width: 100%;
+    }
+    #editout {
+        width: 100%;
+    }
+</style>
+
+<script type="text/javascript">
+
+score = 0;
+
+data = "";
+
+API = window.API || window.parent.API;
+
+function loadSCO() {
+    if (API) {
+        API.LMSInitialize("");
+
+        suspend_data = API.LMSGetValue("cmi.suspend_data");
+
+        if (suspend_data) {
+            data = suspend_data;
+        }
+    }
+}
+
+function sendSCO() {
+    if (API) {
+        API.LMSSetValue("cmi.core.score.raw", score);
+        API.LMSSetValue("cmi.suspend_data", data);
+        API.LMSSetValue("cmi.core.score.lesson_status", "completed");
+
+        API.LMSCommit("");
+    }
+}
+
+function nextSCO() {
+    if (API) {
+        API.LMSSetValue("nav.event","continue"); // Probably Moodle specific
+        API.LMSFinish("");
+    }
+}
+
+window.onload = function() {
+    loadSCO();
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Liens et images</h1>
+
+<p>Le H de HTML vient du mot Hypertexte, c'est à dire du texte avec des liens,
+les liens sont donc extrèmement importants pour le langage HTML, c'est ce qui
+fait que le Web est un réseau de pages connectées.</p>
+
+<p>Pour ajouter des liens il faut utiliser le tag
+<code>&lt;a&gt;</code> mais il faut ajouter une <em>propriété</em> au tag pour
+pouvoir indiquer l'URL (l'adresse) vers lequel pointe le lien. Exemple :
+</p>
+<p><code>&lt;a href="http://example.com/"&gt; texe du lien &lt;/a&gt;</code></p>
+
+<p>
+<b>Écrivez le code HTML pour avoir un lien vers un article Wikipédia.</b>
+</p>
+
+<p>Vous pouvez aussi essayer d'ajouter une image, il faudra trouver l'adresse
+(URL) de l'image, et l'ajouter à la propriété <code>src</code> du tag
+<code>&lt;img&gt;</code>, exemple :</p>
+<p><code>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/534px-Juvenile_Ragdoll.jpg"&gt; &lt;/img&gt;</code></p>
+
+<div id="edcontainer">
+    <div class="edcolumn">
+        Code HTML :
+        <div id="editor"></div>
+    </div>
+    <div class="edcolumn">
+        Résultat :
+        <iframe id="editout"></iframe>
+    </div>
+</div>
+<div id="stats"></div>
+
+<button onclick="submit();">Valider</button>
+<span id="wrong" hidden>❌</span>
+
+<button id="next" onclick="nextSCO();" hidden>✅ Passer à la suite</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-html.min.js"></script>
+<script>
+var editor = ace.edit("editor");
+var iframe = document.getElementById("editout");
+
+var num_a = 0;
+var a_ok = 0;
+
+editor.setOption('maxLines', 15)
+editor.session.setMode("ace/mode/html");
+
+editor.session.on('change', function() {iframe.srcdoc = editor.getValue();});
+
+iframe.onload = function() {
+    var doc = iframe.contentDocument;
+    var stats = document.getElementById("stats");
+
+    num_a = doc.getElementsByTagName("a").length;
+    for(a of doc.getElementsByTagName("a"))
+        if(a.href.match(/http.*wikipedia.org.*/))
+            a_ok = 1;
+    //stats.innerHTML = "Nombre de gras : " + num_bold;
+
+    //for(t of doc.getElementsByTagName("*"))
+    //    stats.insertAdjacentHTML("beforeend", "<p>"+t.tagName+"</p>");
+
+    
+}
+
+editor.setValue("Du texte ...")
+
+function submit() {
+    data = editor.getValue();
+
+    if (num_a > 0 && a_ok > 0) {
+        score = 100;
+        document.getElementById("wrong").hidden = true;
+        document.getElementById("next").hidden = false;
+    } else {
+        document.getElementById("wrong").hidden = false;
+    }
+
+    sendSCO();
+}
+
+</script>
+
+</body>
+</html>

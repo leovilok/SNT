@@ -1,0 +1,47 @@
+<manifest identifier="lvgx.SNT.web.html" version="1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+<metadata>
+<schema>ADL SCORM</schema>
+<schemaversion>1.2</schemaversion>
+</metadata>
+
+<organizations default="lvgx">
+    <organization identifier="lvgx">
+        <title>Les langages informatiques du Web</title>
+        <item identifier="observation_item" identifierref="observation_res">
+            <title>Observer une page Web</title>
+        </item>
+        <item identifier="lignes_item" identifierref="lignes_res">
+            <title>HTML : écrire du texte</title>
+        </item>
+        <item identifier="titres_item" identifierref="titres_res">
+            <title>HTML : Écrire des titres, du gras, ...</title>
+        </item>
+        <item identifier="lien_item" identifierref="lien_res">
+            <title>HTML : ajouter des liens, images, ...</title>
+        </item>
+        <item identifier="style_item" identifierref="style_res">
+            <title>Changer le style d'une page Web : CSS</title>
+        </item>
+    </organization>
+</organizations>
+
+<resources>
+    <resource identifier="observation_res" type="webcontent" adlcp:scormtype="sco" href="observation.html">
+        <file href="observation.html"/>
+    </resource>
+    <resource identifier="lignes_res" type="webcontent" adlcp:scormtype="sco" href="lignes.html">
+        <file href="lignes.html"/>
+    </resource>
+    <resource identifier="titres_res" type="webcontent" adlcp:scormtype="sco" href="titres.html">
+        <file href="titres.html"/>
+    </resource>
+    <resource identifier="lien_res" type="webcontent" adlcp:scormtype="sco" href="lien.html">
+        <file href="lien.html"/>
+    </resource>
+    <resource identifier="style_res" type="webcontent" adlcp:scormtype="sco" href="style.html">
+        <file href="style.html"/>
+    </resource>
+</resources>
+
+</manifest>

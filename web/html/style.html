@@ -1,0 +1,157 @@
+<head>
+
+<meta charset="utf-8"/>
+
+<style type="text/css" media="screen">
+    #edcontainer {
+        display: flex;
+    }
+    .edcolumn {
+        flex: 50%;
+    }
+    #editor {
+        width: 100%;
+    }
+    #editout {
+        width: 100%;
+    }
+</style>
+
+<script type="text/javascript">
+
+score = 100;
+
+data = "";
+
+API = window.API || window.parent.API;
+
+function loadSCO() {
+    if (API) {
+        API.LMSInitialize("");
+
+        suspend_data = API.LMSGetValue("cmi.suspend_data");
+
+        if (suspend_data) {
+            data = suspend_data;
+        }
+    }
+}
+
+function sendSCO() {
+    if (API) {
+        API.LMSSetValue("cmi.core.score.raw", score);
+        API.LMSSetValue("cmi.suspend_data", data);
+        API.LMSSetValue("cmi.core.score.lesson_status", "completed");
+
+        API.LMSCommit("");
+        API.LMSFinish("");
+    }
+}
+
+function nextSCO() {
+    if (API) {
+        API.LMSSetValue("nav.event","continue"); // Probably Moodle specific
+        API.LMSFinish("");
+    }
+}
+
+window.onload = function() {
+    loadSCO();
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Langage CSS</h1>
+
+<p>Pour modifier le style
+(taille, couleur, police du texte, organisation graphique de la page)
+on utilise  plutôt de langage CSS.
+</p>
+
+<p>
+    On peut intégrer du code CSS dans un document écrit en HTML en utilisant le
+    tag <code>&lt;style&gt;</code>.
+    Le langage CSS est très riche et permet de sélectionner précisement quel
+    élément on veut modifier et quel style on veut lui donner.
+    Par exemple le code suivant met les titres <code>h1</code> en rouge :
+</p>
+
+<p><pre><code>&lt;style&gt;
+    h1 {
+        color : red;
+    }
+&lt;/style&gt;
+</code></pre></p>
+
+
+<p>
+<b>Colorez les textes italiques (balise <code>&lt;i&gt;</code>) en bleu (couleur <code>blue</code>), et affichez une phrase contenant de l'italique.</b>
+</p>
+
+<div id="edcontainer">
+    <div class="edcolumn">
+        Code HTML :
+        <div id="editor"></div>
+    </div>
+    <div class="edcolumn">
+        Résultat :
+        <iframe id="editout"></iframe>
+    </div>
+</div>
+<div id="stats"></div>
+
+<button onclick="sendSCO();">Terminer</button>
+(Pas de validation auto ici)
+<span id="wrong" hidden>❌</span>
+
+<button id="next" onclick="nextSCO();" hidden>✅ Passer à la suite</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-html.min.js"></script>
+<script>
+var editor = ace.edit("editor");
+var iframe = document.getElementById("editout");
+
+var num_br = 0
+
+editor.setOption('maxLines', 15)
+editor.session.setMode("ace/mode/html");
+
+editor.session.on('change', function() {iframe.srcdoc = editor.getValue();});
+
+iframe.onload = function() {
+    var doc = iframe.contentDocument;
+    var stats = document.getElementById("stats");
+
+    num_br = doc.getElementsByTagName("br").length;
+    //stats.innerHTML = "Nombre de gras : " + num_bold;
+
+    //for(t of doc.getElementsByTagName("*"))
+    //    stats.insertAdjacentHTML("beforeend", "<p>"+t.tagName+"</p>");
+
+    
+}
+
+editor.setValue("Du texte ...")
+
+function submit() {
+    data = editor.getValue();
+
+    if (num_br >= 2) {
+        score = 100;
+        document.getElementById("wrong").hidden = true;
+        document.getElementById("next").hidden = false;
+    } else {
+        document.getElementById("wrong").hidden = false;
+    }
+
+    sendSCO();
+}
+
+</script>
+
+</body>
+</html>

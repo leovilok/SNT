@@ -1,0 +1,148 @@
+<head>
+
+<meta charset="utf-8"/>
+
+<style type="text/css" media="screen">
+    #edcontainer {
+        display: flex;
+    }
+    .edcolumn {
+        flex: 50%;
+    }
+    #editor {
+        width: 100%;
+    }
+    #editout {
+        width: 100%;
+    }
+</style>
+
+<script type="text/javascript">
+
+score = 0;
+
+data = "";
+
+API = window.API || window.parent.API;
+
+function loadSCO() {
+    if (API) {
+        API.LMSInitialize("");
+
+        suspend_data = API.LMSGetValue("cmi.suspend_data");
+
+        if (suspend_data) {
+            data = suspend_data;
+        }
+    }
+}
+
+function sendSCO() {
+    if (API) {
+        API.LMSSetValue("cmi.core.score.raw", score);
+        API.LMSSetValue("cmi.suspend_data", data);
+        API.LMSSetValue("cmi.core.score.lesson_status", "completed");
+
+        API.LMSCommit("");
+    }
+}
+
+function nextSCO() {
+    if (API) {
+        API.LMSSetValue("nav.event","continue"); // Probably Moodle specific
+        API.LMSFinish("");
+    }
+}
+
+window.onload = function() {
+    loadSCO();
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Langage HTML</h1>
+
+<p>Le langage HTML permet d'écrire le texte du contenu d'une page Web,
+mais aussi de définir sa stucture (titres), de mettre des liens, des images,
+des métadonnées, ...</p>
+
+<p>Le principe du langage est d'écrire directement le texte à afficher mais
+d'ajouter parfois des <em>tag</em> (étiquettes) qui permettent de délimiter
+des zones, insérer des éléments spéciaux, des métadonnées, etc.</p>
+
+<p>Ces tag sont des motes entourés par des chevrons :
+<code>&lt;exemple&gt;</code>. Par exemple, pour passer à la ligne,
+on doit utiliser le tag
+<code>&lt;br&gt;</code>
+</p>
+<p>
+Vous pouvez écrire du code HTML ci-dessous et voir le résult.
+<b>Écrivez 3 lignes de texte.</b>
+</p>
+
+<div id="edcontainer">
+    <div class="edcolumn">
+        Code HTML :
+        <div id="editor"></div>
+    </div>
+    <div class="edcolumn">
+        Résultat :
+        <iframe id="editout"></iframe>
+    </div>
+</div>
+<div id="stats"></div>
+
+<button onclick="submit();">Valider</button>
+<span id="wrong" hidden>❌</span>
+
+<button id="next" onclick="nextSCO();" hidden>✅ Passer à la suite</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-html.min.js"></script>
+<script>
+var editor = ace.edit("editor");
+var iframe = document.getElementById("editout");
+
+var num_br = 0
+
+editor.setOption('maxLines', 15)
+editor.session.setMode("ace/mode/html");
+
+editor.session.on('change', function() {iframe.srcdoc = editor.getValue();});
+
+iframe.onload = function() {
+    var doc = iframe.contentDocument;
+    var stats = document.getElementById("stats");
+
+    num_br = doc.getElementsByTagName("br").length;
+    //stats.innerHTML = "Nombre de gras : " + num_bold;
+
+    //for(t of doc.getElementsByTagName("*"))
+    //    stats.insertAdjacentHTML("beforeend", "<p>"+t.tagName+"</p>");
+
+    
+}
+
+editor.setValue("Du texte ...")
+
+function submit() {
+    data = editor.getValue();
+
+    if (num_br >= 2) {
+        score = 100;
+        document.getElementById("wrong").hidden = true;
+        document.getElementById("next").hidden = false;
+    } else {
+        document.getElementById("wrong").hidden = false;
+    }
+
+    sendSCO();
+}
+
+</script>
+
+</body>
+</html>

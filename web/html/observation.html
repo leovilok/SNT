@@ -1,0 +1,91 @@
+<head>
+
+<meta charset="utf-8"/>
+
+<script type="text/javascript">
+
+score = 0;
+
+data = "";
+
+API = window.API || window.parent.API;
+
+function loadSCO() {
+    if (API) {
+        API.LMSInitialize("");
+
+        suspend_data = API.LMSGetValue("cmi.suspend_data");
+
+        if (suspend_data) {
+            data = suspend_data;
+        }
+    }
+}
+
+function sendSCO() {
+    if (API) {
+        API.LMSSetValue("cmi.core.score.raw", score);
+        API.LMSSetValue("cmi.suspend_data", data);
+        API.LMSSetValue("cmi.core.score.lesson_status", "completed");
+
+        API.LMSCommit("");
+    }
+}
+
+function nextSCO() {
+    if (API) {
+        API.LMSSetValue("nav.event","continue"); // Probably Moodle specific
+        API.LMSFinish("");
+    }
+}
+
+function submit() {
+    data = document.getElementById("rep").value;
+
+    if (data == "41") {
+        score = 100;
+        document.getElementById("wrong").hidden = true;
+        document.getElementById("next").hidden = false;
+    } else {
+        document.getElementById("wrong").hidden = false;
+    }
+
+    sendSCO();
+
+    
+}
+
+window.onload = function() {
+    loadSCO();
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Code source d'une page Web</h1>
+
+<p>Les pages Web sont écrites dans des langages informatiques, le plus
+important étant <b>HTML</b> (<i>HyperText Markup Language</i>).</p>
+
+<p>On peut voir le code source HTML d'une page Web avec un clic droit
+→ "Code source de la page" (la formutation peut changer selon les navigateurs).</p>
+
+<p>Ouvrez un onglet avec cette page d'exemple :
+<a href="https://example.com/">https://example.com/</a> ,
+puis observez le code source de la page.</p>
+
+<p>C'est une page assez simple : le code source contient des métadonnées,
+des informations de présentation (style), et le texte du contenu de la page.</p>
+
+<p><b>À Quelle ligne du code source commence le texte du paragraphe affiché sur la page Web (pas le titre) ?</b></p>
+
+
+<input id="rep" type="number" title="ligne"></input>
+<button onclick="submit();">Valider</button>
+<span id="wrong" hidden>❌</span>
+
+<button id="next" onclick="nextSCO();" hidden>✅ Passer à la suite</button>
+</body>
+</html>
