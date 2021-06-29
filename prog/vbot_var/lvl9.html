@@ -1,0 +1,452 @@
+<head>
+
+<meta charset="utf-8"/>
+
+<style>
+h1,h2 {
+    font-family: Sans;
+}
+
+.stderr {
+    background-color: #fee;
+    color: #900;
+}
+
+.stderr, .stdout {
+    /* display: contents; */ /* uncomment to make print( end='') work */
+    margin: 0px;
+    padding: 0px 0.3em;
+}
+
+.console {
+    max-height: 20em;
+    overflow: auto;
+    border: medium solid black;
+}
+
+.console:empty {
+    display: none;
+}
+
+#feedback {
+    border: solid #aaa;
+    background-color: #eee;
+}
+
+#feedback:empty {
+    display: none;
+}
+
+#edcontainer {
+    display: flex;
+}
+.edcolumn {
+    flex: 50%;
+}
+#breditor {
+    width: 100%;
+}
+
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.55.0/dist/phaser.min.js"></script>
+<script src="https://unpkg.com/brython@3.9.3/brython.js"></script>
+<script src="https://unpkg.com/brython@3.9.3/brython_stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-python.min.js"></script>
+<!--
+<script src="lib/phaser/phaser.min.js"></script>
+<script src="lib/brython/brython.js"></script>
+<script src="lib/brython/brython_stdlib.js"></script>
+<script src="lib/ace/ace.js"></script>
+<script src="lib/ace/mode-python.js"></script>
+-->
+
+<script type="text/javascript">
+
+code = "# il faut définir la fonction u(n)";
+
+score = 0;
+
+API = window.API || window.parent.API;
+
+function loadSCO() {
+    if (API) {
+        API.LMSInitialize("");
+
+        suspend_data = API.LMSGetValue("cmi.suspend_data");
+
+        if (suspend_data) {
+            code = suspend_data;
+        }
+    }
+}
+
+function sendSCO() {
+    if (API) {
+        API.LMSSetValue("cmi.core.score.raw", score);
+        API.LMSSetValue("cmi.suspend_data", code);
+        API.LMSSetValue("cmi.core.score.lesson_status", "completed");
+
+        API.LMSCommit("");
+    }
+}
+
+function nextSCO() {
+    if (API) {
+        API.LMSSetValue("nav.event","continue"); // Probably Moodle specific
+        API.LMSFinish("");
+    }
+}
+
+// Phaser stuff
+
+var tilesize = 32;
+var delay = 250;
+
+var tiles = [];
+
+var movetime = 0;
+var delayed_moves = [];
+
+var config = {
+    type: Phaser.AUTO,
+    width: tilesize*10,
+    height: tilesize*10,
+    parent: "game",
+    scene: {
+        preload: preload,
+        create: create
+    }
+};
+
+function preload() {
+    this.load.image("tilemap", "img/tilemap.png")
+    this.load.image("bot", "img/bot.png")
+    this.load.tilemapCSV('map', 'lvl/lvl9.csv');
+}
+
+function create() {
+    map = this.make.tilemap({ key: 'map', tileWidth: 32, tileHeight: 32 });
+    var tileset = map.addTilesetImage('tilemap');
+    layer = map.createLayer(0, tileset, 0, 0);
+    
+    bot = this.add.image(tilesize * 1.5, tilesize * 1.5, "bot");
+}
+
+function gen_tiles() {
+    for (var i = 0 ; i < 10 ; i++) {
+        tiles[i] = [];
+        for (var j = 0 ; j < 10 ; j++) {
+            var id = map.getTileAt(i,j).index;
+            if (id == 4)
+                id = 0;
+            tiles[i][j] = id;
+        }
+    }
+}
+
+function get_tile_at(x,y) {
+    return tiles[x][y];
+}
+
+function reset_board() {
+    movetime = 0;
+    bot.x = tilesize * 1.5;
+    bot.y = tilesize * 1.5;
+    bot.angle = 0;
+
+    for (move of delayed_moves){
+        clearTimeout(move)
+    }
+
+    delayed_moves = []
+
+    gen_tiles()
+}
+
+function move_left() {
+    delayed_moves.push(
+        setTimeout(
+            function() {
+                bot.x -= tilesize;
+                bot.angle = 180;
+            }, movetime)
+        );
+    movetime += delay;
+}
+
+function move_right() {
+    delayed_moves.push(
+        setTimeout(
+            function() {
+                bot.x += tilesize;
+                bot.angle = 0;
+            }, movetime)
+        );
+    movetime += delay;
+}
+
+function move_up() {
+    delayed_moves.push(
+        setTimeout(
+            function() {
+                bot.y -= tilesize;
+                bot.angle = -90;
+            }, movetime)
+        );
+    movetime += delay;
+}
+
+function move_down() {
+    delayed_moves.push(
+        setTimeout(
+            function() {
+                bot.y += tilesize;
+                bot.angle = 90;
+            }, movetime)
+        );
+    movetime += delay;
+}
+
+window.onload = function() {
+    loadSCO();
+    document.getElementById("code").textContent = code;
+
+    game = new Phaser.Game(config);
+    
+    brython();
+}
+</script>
+
+<script type="text/python">
+# Requires Brython and Ace editor
+
+from browser import document, window, html
+from sys import stderr, stdout, settrace
+from traceback import print_exc, extract_stack, extract_tb
+
+def make_max_line_tracer(maxlines):
+    lines = 0
+    def tracer(frame, event, arg):
+        nonlocal lines
+        if event == 'line':
+            lines += 1
+            if lines >= maxlines:
+                raise TimeoutError
+        return tracer
+    return tracer
+
+def exec_code(editor, id):
+    reset()
+    
+    feedback("Le drapeau n'est pas encore atteint")
+
+    code_lines = editor.session.getLength()
+    if code_lines > max_code_lines:
+        feedback("Trop de lignes utilisées ( " + str(code_lines) + "/" + str(max_code_lines) + ")")
+        return
+    
+    console = document[id + "_console"]
+    console.clear()
+    stderr.write = lambda data : console_target(data, console, True)
+    stdout.write = lambda data : console_target(data, console)
+
+    code = editor.getValue()
+    try:
+        compiled = compile(code, "<" + id + ">", "exec")
+    except SyntaxError:
+        print_exc(limit=0)
+        return
+
+    settrace(make_max_line_tracer(10000)) # increase to allow longer execution
+    try:
+        exec(code)
+    except TimeoutError:
+        settrace(None)
+        print("L'exécution prend trop de temps, abandon.", file=stderr)
+    except Exception as e:
+        settrace(None)
+        tb_len = len(extract_tb(e.__traceback__)) - len(extract_stack())
+        print_exc(limit=-tb_len)
+    finally:
+        settrace(None)
+
+    window.code = code
+    #window.score = check()
+    window.sendSCO()
+
+def console_target(data, elt, err=False):
+    elt <= html.PRE(data, Class="stderr" if err else "stdout")
+    elt.scrollTop = elt.scrollHeight
+
+breditors = document.select(".breditor")
+
+max_code_lines = 15
+
+for ed_elt in breditors:
+    editor = window.ace.edit(ed_elt.id)
+    editor.session.setMode("ace/mode/python")
+    #editor.setOption('fontSize', '14px')
+    editor.setOption('maxLines', max_code_lines)
+    editor.setOption('minLines', max_code_lines)
+
+    console = html.DIV(Class="console", id=ed_elt.id + "_console")
+
+    ed_elt.insertAdjacentElement('afterend', console)
+
+    exec_button = html.BUTTON("Exécuter →")
+    exec_button.bind("click", lambda ev : exec_code(editor, ed_elt.id))
+    ed_elt.insertAdjacentElement('afterend', exec_button)
+
+def feedback(msg):
+    document["feedback"].clear()
+    document["feedback"] <= msg
+
+coords = [1,1]
+
+def reset():
+    global coords
+    window.reset_board()
+    coords = [1,1]
+
+def gauche():
+    if coords[0] >= 0:
+        move_to(coords[0]-1, coords[1], -1, 0, window.move_left)
+
+def droite():
+    if coords[0] < 10:
+        move_to(coords[0]+1, coords[1], 1, 0, window.move_right)
+
+def haut():
+    if coords[1] >= 0:
+        move_to(coords[0], coords[1]-1, 0, -1, window.move_up)
+
+def bas():
+    if coords[1] < 10:
+        move_to(coords[0], coords[1]+1, 0 , 1, window.move_down)
+
+def move_to(x, y, dx, dy, move):
+    tile = window.get_tile_at(x, y)
+    if tile in (0,1,3):
+        move()
+        coords[0] += dx
+        coords[1] += dy
+        if tile == 1:
+            win()
+        elif tile == 3:
+            fall()
+        else:
+            feedback("Le robot n'est pas sur un drapeau")
+            window.score = 0
+    
+
+def voir_gauche():
+    if coords[0] == 0:
+        return 3
+    else:
+        return voir(coords[0]-1, coords[1])
+
+def voir_droite():
+    if coords[0] == 10:
+        return 3
+    else:
+        return voir(coords[0]+1, coords[1])
+
+def voir_haut():
+    if coords[1] == 0:
+        return 3
+    else:
+        return voir(coords[0], coords[1]-1)
+
+def voir_bas():
+    if coords[1] == 10:
+        return 3
+    else:
+        return voir(coords[0], coords[1]+1)
+
+def voir(x,y):
+    return window.get_tile_at(x,y)
+
+def pas_u(n):
+    for i in range(n):
+        bas()
+    droite()
+    droite()
+    for i in range(n):
+        haut()
+
+def fall():
+    feedback("Le robot est tombé dans le vide !")
+    raise Exception("Le robot est tombé dans le vide")
+    
+
+def win():
+    window.score = 100
+    # feedback("Bravo ! (exécutez plusieurs fois avant de continuer)")
+    feedback("Bravo ! ")
+    document["feedback"] <= html.BUTTON("Passer à la suite", onclick="nextSCO();")
+    
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Niveau 9</h1>
+
+<p>
+Vous disposez des fonctions
+<code>droite()</code>,
+<code>gauche()</code>,
+<code>haut()</code>, et
+<code>bas()</code>
+pour faire avancer le robot.
+</p>
+
+<p>
+Il faut maintenant écrire vous-même la fonction
+<code>u(<i>n</i>)</code>
+qui va faire faire un virage vers le bas
+de longueur <i>n</i> au robot.
+</p>
+
+<p>
+Exemples de fonction avec paramètre :
+<pre><code># on définis une fonction f qui prend 1 paramètre n
+
+def f(n):
+    # à l'intérieur de la fonction, on utilise n comme une variable :
+    print(n)
+    for i in range(n):
+        print("lol")
+
+# on appelle f :
+
+f(42) # n vaudra 42 dans la fonction
+
+lol = 4
+f(lol) # n vaudra 4 dans la fonction
+
+for i in range(3):
+    f(i)
+</code></pre>
+</p>
+
+
+<div id="edcontainer">
+    <div class="edcolumn">
+        Code python :
+        <pre id="code" class="breditor"></pre>
+        <div id="feedback"></div>
+    </div>
+    <div class="edcolumn">
+        Plateau :
+        <div id="game"></div>
+    </div>
+</div>
+
+</body>
+</html>
