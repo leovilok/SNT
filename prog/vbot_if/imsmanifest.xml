@@ -1,0 +1,85 @@
+<manifest identifier="lvgx.SNT.prog.vbot.if" version="1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+<metadata>
+<schema>ADL SCORM</schema>
+<schemaversion>1.2</schemaversion>
+</metadata>
+
+<organizations default="lvgx">
+    <organization identifier="lvgx">
+        <title>Programmation Python</title>
+        <item identifier="lvl1_item" identifierref="lvl1_res">
+            <title>Niveau 1</title>
+        </item>
+        <item identifier="lvl2_item" identifierref="lvl2_res">
+            <title>Niveau 2</title>
+        </item>
+        <item identifier="lvl3_item" identifierref="lvl3_res">
+            <title>Niveau 3</title>
+        </item>
+        <item identifier="lvl4_item" identifierref="lvl4_res">
+            <title>Niveau 4</title>
+        </item>
+        <item identifier="lvl5_item" identifierref="lvl5_res">
+            <title>Niveau 5</title>
+        </item>
+        <item identifier="lvl6_item" identifierref="lvl6_res">
+            <title>Niveau 6</title>
+        </item>
+        <item identifier="lvl7_item" identifierref="lvl7_res">
+            <title>Niveau 7</title>
+        </item>
+        <item identifier="lvl8_item" identifierref="lvl8_res">
+            <title>Niveau 8</title>
+        </item>
+    </organization>
+</organizations>
+
+<resources>
+    <resource identifier="lvl1_res" type="webcontent" adlcp:scormtype="sco" href="lvl1.html">
+        <file href="lvl1.html"/>
+        <file href="lvl/lvl1.csv"/>
+        <dependency identifierref="imgs"/>
+    </resource>
+    <resource identifier="lvl2_res" type="webcontent" adlcp:scormtype="sco" href="lvl2.html">
+        <file href="lvl2.html"/>
+        <file href="lvl/lvl2.csv"/>
+        <dependency identifierref="imgs"/>
+    </resource>
+    <resource identifier="lvl3_res" type="webcontent" adlcp:scormtype="sco" href="lvl3.html">
+        <file href="lvl3.html"/>
+        <file href="lvl/lvl3.csv"/>
+        <dependency identifierref="imgs"/>
+    </resource>
+    <resource identifier="lvl4_res" type="webcontent" adlcp:scormtype="sco" href="lvl4.html">
+        <file href="lvl4.html"/>
+        <file href="lvl/lvl4.csv"/>
+        <dependency identifierref="imgs"/>
+    </resource>
+    <resource identifier="lvl5_res" type="webcontent" adlcp:scormtype="sco" href="lvl5.html">
+        <file href="lvl5.html"/>
+        <file href="lvl/lvl5.csv"/>
+        <dependency identifierref="imgs"/>
+    </resource>
+    <resource identifier="lvl6_res" type="webcontent" adlcp:scormtype="sco" href="lvl6.html">
+        <file href="lvl6.html"/>
+        <file href="lvl/lvl6.csv"/>
+        <dependency identifierref="imgs"/>
+    </resource>
+    <resource identifier="lvl7_res" type="webcontent" adlcp:scormtype="sco" href="lvl7.html">
+        <file href="lvl7.html"/>
+        <file href="lvl/lvl7.csv"/>
+        <dependency identifierref="imgs"/>
+    </resource>
+    <resource identifier="lvl8_res" type="webcontent" adlcp:scormtype="sco" href="lvl8.html">
+        <file href="lvl8.html"/>
+        <file href="lvl/lvl8.csv"/>
+        <dependency identifierref="imgs"/>
+    </resource>
+    <resource identifier="imgs" type="webcontent" adlcp:scormtype="asset">
+        <file href="img/tilemap.png"/>
+        <file href="img/bot.png"/>
+    </resource>
+</resources>
+
+</manifest>
