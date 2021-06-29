@@ -1,0 +1,273 @@
+{
+  "id": "buildings",
+  "title": {
+    "fr": "Bâtiments"
+  },
+  "shortDescription": {
+    "fr": "Bâtiments"
+  },
+  "description": {
+    "fr": "Type, étages, toit des bâtiments"
+  },
+  "language": [
+    "fr"
+  ],
+  "maintainer": "",
+  "icon": "./assets/svg/home.svg",
+  "version": "20210531",
+  "startLat": 45.70141,
+  "startLon": -0.31751,
+  "startZoom": 19,
+  "widenFactor": 0.01,
+  "socialImage": "",
+  "layers": [
+    {
+      "id": "buildings",
+      "name": {
+        "fr": "Bâtiments"
+      },
+      "minzoom": 19,
+      "overpassTags": {
+        "or": [
+          "building=yes",
+          "building=school",
+          "building=detached",
+          "building=house",
+          "building=residential",
+          "building=apartments",
+          "building=garage",
+          "building=shed",
+          "building=industrial",
+          "building=sports_hall"
+        ]
+      },
+      "title": {
+        "render": {
+          "fr": "Bâtiment"
+        },
+        "mappings": []
+      },
+      "description": {
+        "fr": "Étages des bâtiments"
+      },
+      "tagRenderings": [
+        {
+          "render": {
+            "fr": "Ce bâtiment a {building:levels} niveaux"
+          },
+          "question": {
+            "fr": "Combien ce bâtiment a-t-il de niveaux ? (d'étages en comptant le rez-de-chaussée)"
+          },
+          "freeform": {
+            "key": "building:levels",
+            "type": "pnat"
+          }
+        },
+        {
+          "freeform": {
+            "key": "building",
+            "addExtraTags": []
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "building=school"
+                ]
+              },
+              "then": {
+                "fr": "C'est un bâtiment scolaire"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "building=industrial"
+                ]
+              },
+              "then": {
+                "fr": "C'est un bâtiment industiel"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "building=sports_hall"
+                ]
+              },
+              "then": {
+                "fr": "C'est une salle de sport ou  ungymnase"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "building=shed"
+                ]
+              },
+              "then": {
+                "fr": "C'est un bâtiment de stoquage ou un atelier"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "building=garage"
+                ]
+              },
+              "then": {
+                "fr": "C'est un garage"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "building=detached"
+                ]
+              },
+              "then": {
+                "fr": "C'est une maison individuelle détachée des autres"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "building=house"
+                ]
+              },
+              "then": {
+                "fr": "C'est une maison (qui peut en toucher une autre)"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "building=apartments"
+                ]
+              },
+              "then": {
+                "fr": "C'est un immeuble d'apartements"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "building=yes"
+                ]
+              },
+              "then": {
+                "fr": "Ce bâtiment n'a pas encore de type précis (à modifier)"
+              },
+              "hideInAnswer": true
+            }
+          ],
+          "render": {
+            "fr": "Ce bâtiment est de type : {building}"
+          },
+          "question": {
+            "fr": "Quel est le type de ce bâtiment ?"
+          }
+        },
+        {
+          "render": {
+            "fr": "Le toit de ce bâtiment a pour forme : {roof:shape}"
+          },
+          "question": {
+            "fr": "Quelle est la forme du toit de ce bâtiment ?"
+          },
+          "freeform": {
+            "key": "roof:shape"
+          },
+          "mappings": [
+            {
+              "if": {
+                "and": [
+                  "roof:shape=flat"
+                ]
+              },
+              "then": {
+                "fr": "Ce toit est plat <img src=\"https://wiki.openstreetmap.org/w/images/thumb/0/03/Roof0_0.jpg/565px-Roof0_0.jpg\" alt=\"Toit plat\"/>"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "roof:shape=skillion"
+                ]
+              },
+              "then": {
+                "fr": "Ce toit a une simple pente <img src=\"https://wiki.openstreetmap.org/w/images/thumb/1/19/Roof1_0.jpg/537px-Roof1_0.jpg\" alt=\"Toit à simple pente\"/>"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "roof:shape=gabled"
+                ]
+              },
+              "then": {
+                "fr": "Toit à double pente <img src=\"https://wiki.openstreetmap.org/w/images/thumb/e/e8/Roof2_0.jpg/537px-Roof2_0.jpg\" alt=\"Toit à double pente\"/>"
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "roof:shape=half-hipped"
+                ]
+              },
+              "then": {
+                "fr": "Toit à double pente (coupées aux angles)<img src=\"https://wiki.openstreetmap.org/w/images/thumb/6/6b/Roof2_3.jpg/537px-Roof2_3.jpg\" alt=\"Toit à double pente coupé\"/> "
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "roof:shape=hipped"
+                ]
+              },
+              "then": {
+                "fr": "Toit à 4 pentes<img src=\"https://wiki.openstreetmap.org/w/images/thumb/6/67/Roof2_4.jpg/537px-Roof2_4.jpg\" alt=\"Toit à 4 pentes\"/> "
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "roof:shape=pyramidal"
+                ]
+              },
+              "then": {
+                "fr": "Toit à 4 pentes qui se rejoignent (pyramidal)<img src=\"https://wiki.openstreetmap.org/w/images/thumb/a/a1/Roof2_5.jpg/537px-Roof2_5.jpg\" alt=\"Toit pyramidal\"/> "
+              }
+            },
+            {
+              "if": {
+                "and": [
+                  "roof:shape=saltbox"
+                ]
+              },
+              "then": {
+                "fr": "Toit à double pente et sommet plat (probablement une erreur) <img src=\"https://wiki.openstreetmap.org/w/images/thumb/7/7b/Roof3_1.jpg/537px-Roof3_1.jpg\" alt=\"Toit saltbox\"/> "
+              },
+              "hideInAnswer": true
+            }
+          ]
+        }
+      ],
+      "hideUnderlayingFeaturesMinPercentage": 0,
+      "icon": {
+        "render": "./assets/svg/home.svg"
+      },
+      "width": {
+        "render": "8"
+      },
+      "iconSize": {
+        "render": "40,40,center"
+      },
+      "color": {
+        "render": "#00f"
+      },
+      "wayHandling": 0
+    }
+  ],
+  "roamingRenderings": []
+}
